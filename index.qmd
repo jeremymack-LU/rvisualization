@@ -1,0 +1,224 @@
+---
+title: "Data Visualization with R <br/><br/><br/><br/><br/>"
+title-slide-attributes:
+    data-background-image: images/lts_logo.jpg
+    data-background-size: "30%"
+    data-background-opacity: "0.90"
+    data-background-position: "50% 45%"
+format:
+   revealjs:
+     theme: [dark, custom.scss]
+     code-fold: false
+     slide-number: c
+     controls: true
+     css: custom.css
+     menu: {
+      side: 'left',
+      numbers: true,
+      markers: true,
+      width: 'normal',
+      hideMissingTitles: true,
+      titleSelector: ''}
+preview-links: auto
+---
+
+## About this presentation {data-menu-title="About"}
+
+::: columns
+-   This seminar is the third in a series on [**R programming**]{style="color:#edea2b"}.
+
+-   It's targeted at people that took the previous seminars, or have programming experience.
+
+::: fragment
+-   By the end of this presentation, you should know about...
+
+    1.  The Grammar of Graphics
+    2.  Static Visualizations
+        - Graphical and tabular
+    3.  Dynamic Visualizations
+        - Graphical and tabular
+:::
+
+::: fragment
+-   Raw code available on [Github](https://github.com/jeremymack-LU/rvisualization/blob/main/index.qmd)
+:::
+:::
+
+![](images/ggplot2_masterpiece.png){.absolute bottom="0" right="0" width="400"}
+
+## Structure of the presentation {data-menu-title="Presentation outline"}
+
+The presentation is split into five topics:
+
+::: fragment
+-   Topic 1:    The (layered) Grammar of Graphics
+:::
+
+::: fragment
+-   Topic 2:    Static visualizations
+
+-   Topic 3:    Dynamic visualizations
+
+-   Topic 4:    Shiny Apps - a preview
+:::
+
+::: fragment
+-   Topic 5:    Additional resources
+:::
+
+![](images/r_learners.png){.absolute bottom="0" right="0" width="50%" height="50%"}
+
+## Data visualization with R {data-menu-title="Data workflow"}
+
+::: {.r-stack}
+![](images/data-science-wrangle1.png)
+
+![](images/data-science-wrangle2.png){.fragment}
+
+![](images/data-science-wrangle3.png){.fragment}
+
+![](images/data-science-wrangle1.png){.fragment}
+
+![](images/data-science-tidy.png){.fragment}
+:::
+
+## Data visualization with R {data-menu-title="Dinosaur"}
+<br/>
+<center><b>“The simple graph has brought more information to the data analyst’s mind<br/>than any other device.” - John Tukey</b></center>
+<br/>
+<center><img src="./images/dinosaur2.gif" alt="gif" height=200</></center>
+
+# Topic 1 {data-menu-title="Topic 1"}
+
+[The ([**layered**]{style="color:#edea2b"}) Grammar of Graphics]{style="font-size: 1.5em; text-align: center"}
+
+## The ([**layered**]{style="color:#edea2b"}) Grammar of Graphics {data-menu-title="Grammar of Graphics"}
+
+-   *The Grammar of Graphics*
+
+-   Structure of data graphics
+
+-   Foundation for modern applications and graphing software
+
+    - Tableau
+    - Vega-Lite
+    - `ggplot2`
+
+![](images/grammar.png){.absolute top="52" right="0" width="30%"}
+
+## The ([**layered**]{style="color:#edea2b"}) Grammar of Graphics {data-menu-title="ggplot2"}
+
+-   Tidyverse package - `ggplot2`
+
+-   Implementation of the grammar of graphics
+
+::: fragment
+::: incremental
+-   Layered approach to building graphics
+
+    - Data creates the base (tidy format)
+    - Link variables to graphical properties
+    - Transform data to displayed values
+    - Variable and property ranges
+    - Graphical representation of the data
+    - Creates "small multiples"
+    - Sets unique position
+    - Defines the overall look of the plot
+:::
+:::
+
+## The ([**layered**]{style="color:#edea2b"}) Grammar of Graphics {data-menu-title="ggplot2"}
+
+-   Tidyverse package - `ggplot2`
+
+-   Implementation of the grammar of graphics
+
+::: {.fragment .fade-in-then-semi-out fragment-index=1} 
+-   Layered approach to building graphics
+    
+    - Data creates the base (tidy format)
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index=2}  
+::: {.absolute top="160" left="0"}
+-   Layered approach to building graphics
+    
+    - Data creates the base (tidy format)
+    - Link variables to graphical properties
+:::
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index=3}  
+::: {.absolute top="160" left="0"}
+-   Layered approach to building graphics
+    
+    - Data creates the base (tidy format)
+    - Link variables to graphical properties
+    - Transform data to displayed values
+:::
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index=4}  
+::: {.absolute top="160" left="0"}
+-   Layered approach to building graphics
+    
+    - Data creates the base (tidy format)
+    - Link variables to graphical properties
+    - Transform data to displayed values
+    - Variable and property ranges
+:::
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index=5}  
+::: {.absolute top="160" left="0"}
+-   Layered approach to building graphics
+    
+    - Data creates the base (tidy format)
+    - Link variables to graphical properties
+    - Transform data to displayed values
+    - Variable and property ranges
+    - Graphical representation of the data
+:::
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index=6}  
+::: {.absolute top="160" left="0"}
+-   Layered approach to building graphics
+    
+    - Data creates the base (tidy format)
+    - Link variables to graphical properties
+    - Transform data to displayed values
+    - Variable and property ranges
+    - Graphical representation of the data
+    - Creates "small multiples"
+:::
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index=7}  
+::: {.absolute top="160" left="0"}
+-   Layered approach to building graphics
+    
+    - Data creates the base (tidy format)
+    - Link variables to graphical properties
+    - Transform data to displayed values
+    - Variable and property ranges
+    - Graphical representation of the data
+    - Creates "small multiples"
+    - Sets unique position
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=8}  
+::: {.absolute top="160" left="0"}
+-   Layered approach to building graphics
+    
+    - Data creates the base (tidy format)
+    - Link variables to graphical properties
+    - Transform data to displayed values
+    - Variable and property ranges
+    - Graphical representation of the data
+    - Creates "small multiples"
+    - Sets unique position
+    - Defines the overall look of the plot
+:::
+:::
