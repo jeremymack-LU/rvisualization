@@ -371,7 +371,7 @@ geom_point(mapping=aes(x=eruptions,
 #| eval: false
 ggplot(data=faithful) +
 geom_point(mapping=aes(x=eruptions,y=waiting))
-```
+    ```
     :::
     
     ::: fragment
@@ -383,7 +383,7 @@ ggplot(
   data=faithful,
   mapping=aes(x=eruptions,y=waiting)) +
 geom_point()
-```
+    ```
     :::
     
     ::: fragment
@@ -395,7 +395,7 @@ ggplot() +
 geom_point(
   data=faithful,
   mapping=aes(x=eruptions,y=waiting))
-```
+    ```
     :::
     
 ## Topic 2: Static Visualizations {data-menu-title="ggplot"}
@@ -482,7 +482,7 @@ ggplot(data=faithful) +
     geom_point(mapping=aes(x=eruptions,
                            y=waiting,
                            color=eruptions < 3))
-```
+    ```
     :::
     
     ::: {.fragment fragment-index=2}
@@ -494,7 +494,7 @@ ggplot(data=faithful) +
     geom_point(mapping=aes(x=eruptions,
                            y=waiting),
                color='blue')
-```
+    ```
     :::
     
     ::: {.fragment fragment-index=4}
@@ -506,7 +506,7 @@ ggplot(data=faithful) +
     geom_point(mapping=aes(x=eruptions,
                            y=waiting,
                            color='blue'))
-```
+    ```
     :::
     
 ::: {.fragment .fade-in-then-out fragment-index=3 .absolute top="90" left="100"}
@@ -569,7 +569,7 @@ ggplot(data=faithful) +
                            color=eruptions < 3,
                            size=waiting),
                alpha=0.5)
-```
+    ```
     :::
     
 ::: {.fragment .fade-in-then-out fragment-index=1 .absolute top="40" left="0"}
@@ -613,7 +613,7 @@ ggplot(data=faithful,
        mapping=aes(x=eruptions,y=waiting)) +
       geom_point() +
       geom_smooth(method='lm')
-```
+    ```
     :::
     
     ::: {.fragment fragment-index=3}
@@ -625,7 +625,7 @@ ggplot(data=faithful,
        mapping=aes(x=eruptions,y=waiting)) +
       geom_smooth(method='lm') +
       geom_point()
-```
+    ```
     :::
     
 ::: {.fragment .fade-in-then-out fragment-index=2 .absolute top="90" left="100"}
@@ -751,6 +751,72 @@ plot +
 :::
 
 ## Exercise 1 - `ggplot2`: {data-background="#ffffff" data-menu-title="Exercise1"}
+
 -   We just learned that `ggplot2` is an implementation of the "Grammar of Graphics" that uses a layered approach.
 
--   
+-   Complete the following script, to re-create the visualization of the relationship between penguin flipper length and body mass.
+
+:::: columns
+::: {.column width='45%'}
+```{r style="font-size: 0.7em"}
+#| echo: true
+#| eval: false
+library(palmerpenguins)
+slice_head(penguins,n=3)
+```
+
+```{r style="font-size: 0.55em"}
+#| echo: false
+#| eval: true
+library(palmerpenguins)
+slice_head(penguins,n=3)
+```
+
+```{r style="font-size: 0.7em"}
+#| echo: true
+#| eval: false
+# Visualize body mass by flipper length
+penguins |> 
+    drop_na() |> 
+    ggplot(aes(x=??????,
+               y=??????)) +
+    geom_point(aes(color=??????)) +
+    geom_smooth(method='lm',
+                color=??????) +
+    scale_y_continuous(limits=c(2500,6500),
+                       breaks=seq(2500,6500,??????)) +
+    scale_color_discrete(name='Penguin species:') +
+    labs(x='Flipper length (mm)',
+         y=??????) +
+    theme_minimal() +
+    theme(legend.position = ??????)
+```
+:::
+::: {.column width='55%'}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+library(palmerpenguins)
+penguins |> 
+    drop_na() |> 
+    ggplot(aes(x=flipper_length_mm,
+               y=body_mass_g)) +
+    geom_point(aes(color=species)) +
+    geom_smooth(method='lm',
+                color='black') +
+    scale_y_continuous(limits=c(2500,6500),
+                       breaks=seq(2500,6500,1000)) +
+    scale_color_discrete(name='Penguin species:') +
+    labs(x='Flipper length (mm)',
+         y='Body mass (g)') +
+    theme_minimal() +
+    theme(legend.position = 'top',
+          legend.title=element_text(size = 14),
+          legend.text=element_text(size = 12),
+          axis.text=element_text(size = 12),
+          axis.title=element_text(size = 14))
+```
+:::
+::::

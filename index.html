@@ -1020,8 +1020,50 @@
 <h2>Exercise 1 - <code>ggplot2</code>:</h2>
 <ul>
 <li><p>We just learned that <code>ggplot2</code> is an implementation of the “Grammar of Graphics” that uses a layered approach.</p></li>
-<li></li>
+<li><p>Complete the following script, to re-create the visualization of the relationship between penguin flipper length and body mass.</p></li>
 </ul>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="cell" style="font-size: 0.7em">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="fu">slice_head</span>(penguins,<span class="at">n=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" style="font-size: 0.55em">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 8
+  species island    bill_length_mm bill_depth_mm flipper_l…¹ body_…² sex    year
+  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;       &lt;int&gt;   &lt;int&gt; &lt;fct&gt; &lt;int&gt;
+1 Adelie  Torgersen           39.1          18.7         181    3750 male   2007
+2 Adelie  Torgersen           39.5          17.4         186    3800 fema…  2007
+3 Adelie  Torgersen           40.3          18           195    3250 fema…  2007
+# … with abbreviated variable names ¹​flipper_length_mm, ²​body_mass_g</code></pre>
+</div>
+</div>
+<div class="cell" style="font-size: 0.7em">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># Visualize body mass by flipper length</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a>penguins <span class="sc">|&gt;</span> </span>
+<span id="cb19-3"><a href="#cb19-3"></a>    <span class="fu">drop_na</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb19-4"><a href="#cb19-4"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>??????,</span>
+<span id="cb19-5"><a href="#cb19-5"></a>               <span class="at">y=</span>??????)) <span class="sc">+</span></span>
+<span id="cb19-6"><a href="#cb19-6"></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>??????)) <span class="sc">+</span></span>
+<span id="cb19-7"><a href="#cb19-7"></a>    <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">'lm'</span>,</span>
+<span id="cb19-8"><a href="#cb19-8"></a>                <span class="at">color=</span>??????) <span class="sc">+</span></span>
+<span id="cb19-9"><a href="#cb19-9"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">2500</span>,<span class="dv">6500</span>),</span>
+<span id="cb19-10"><a href="#cb19-10"></a>                       <span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">2500</span>,<span class="dv">6500</span>,??????)) <span class="sc">+</span></span>
+<span id="cb19-11"><a href="#cb19-11"></a>    <span class="fu">scale_color_discrete</span>(<span class="at">name=</span><span class="st">'Penguin species:'</span>) <span class="sc">+</span></span>
+<span id="cb19-12"><a href="#cb19-12"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">'Flipper length (mm)'</span>,</span>
+<span id="cb19-13"><a href="#cb19-13"></a>         <span class="at">y=</span>??????) <span class="sc">+</span></span>
+<span id="cb19-14"><a href="#cb19-14"></a>    <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb19-15"><a href="#cb19-15"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> ??????)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:55%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-28-1.png" width="864"></p>
+</div>
+</div>
+</div>
+</div>
 <div class="footer footer-default">
 
 </div>
