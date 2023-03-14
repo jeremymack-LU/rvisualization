@@ -27,6 +27,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link rel="stylesheet" href="custom.css">
@@ -424,112 +488,540 @@
 <li><p>Tidyverse package - <code>ggplot2</code></p></li>
 <li><p>Implementation of the grammar of graphics</p></li>
 </ul>
-<div class="fragment fade-in-then-semi-out" data-fragment-index="1">
+<div class="fragment fade-out" data-fragment-index="1">
+<p><img data-src="images/ggplot2_hex.png" class="absolute" style="top: 52px; right: 0px; width: 30%; "></p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="1">
 <ul>
 <li><p>Layered approach to building graphics</p>
 <ul>
 <li>Data creates the base (tidy format)</li>
 </ul></li>
 </ul>
+<p><img data-src="images/ggplot2_2.png" class="absolute" style="top: 52px; right: 0px; width: 35%; "></p>
 </div>
-<div class="fragment fade-in-then-semi-out" data-fragment-index="2">
-<div class="absolute" style="top: 160px; left: 0px; ">
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<p><img data-src="images/ggplot2_3.png" class="absolute" style="top: 52px; right: 0px; width: 35%; "></p>
+<div class="absolute" style="top: 172px; left: 0px; ">
 <ul>
 <li><p>Layered approach to building graphics</p>
 <ul>
-<li><span style="color:rgba(255,255,255, 0">Data creates the base (tidy format)</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Data creates the base (tidy format)</span></li>
 <li>Link variables to graphical properties</li>
 </ul></li>
 </ul>
 </div>
 </div>
-<div class="fragment fade-in-then-semi-out" data-fragment-index="3">
-<div class="absolute" style="top: 160px; left: 0px; ">
+<div class="fragment fade-in-then-out" data-fragment-index="3">
+<p><img data-src="images/ggplot2_4.png" class="absolute" style="top: 52px; right: 0px; width: 35%; "></p>
+<div class="absolute" style="top: 172px; left: 0px; ">
 <ul>
 <li><p>Layered approach to building graphics</p>
 <ul>
-<li><span style="color:rgba(255,255,255, 0">Data creates the base (tidy format)</span></li>
-<li><span style="color:rgba(255,255,255, 0">Link variables to graphical properties</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Data creates the base (tidy format)</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Link variables to graphical properties</span></li>
 <li>Transform data to displayed values</li>
 </ul></li>
 </ul>
 </div>
 </div>
-<div class="fragment fade-in-then-semi-out" data-fragment-index="4">
-<div class="absolute" style="top: 160px; left: 0px; ">
+<div class="fragment fade-in-then-out" data-fragment-index="4">
+<p><img data-src="images/ggplot2_5.png" class="absolute" style="top: 52px; right: 0px; width: 35%; "></p>
+<div class="absolute" style="top: 172px; left: 0px; ">
 <ul>
 <li><p>Layered approach to building graphics</p>
 <ul>
-<li><span style="color:rgba(255,255,255, 0">Data creates the base (tidy format)</span></li>
-<li><span style="color:rgba(255,255,255, 0">Link variables to graphical properties</span></li>
-<li><span style="color:rgba(255,255,255, 0">Transform data to displayed values</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Data creates the base (tidy format)</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Link variables to graphical properties</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Transform data to displayed values</span></li>
 <li>Variable and property ranges</li>
 </ul></li>
 </ul>
 </div>
 </div>
-<div class="fragment fade-in-then-semi-out" data-fragment-index="5">
-<div class="absolute" style="top: 160px; left: 0px; ">
+<div class="fragment fade-in-then-out" data-fragment-index="5">
+<p><img data-src="images/ggplot2_6.png" class="absolute" style="top: 52px; right: 0px; width: 35%; "></p>
+<div class="absolute" style="top: 172px; left: 0px; ">
 <ul>
 <li><p>Layered approach to building graphics</p>
 <ul>
-<li><span style="color:rgba(255,255,255, 0">Data creates the base (tidy format)</span></li>
-<li><span style="color:rgba(255,255,255, 0">Link variables to graphical properties</span></li>
-<li><span style="color:rgba(255,255,255, 0">Transform data to displayed values</span></li>
-<li><span style="color:rgba(255,255,255, 0">Variable and property ranges</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Data creates the base (tidy format)</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Link variables to graphical properties</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Transform data to displayed values</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Variable and property ranges</span></li>
 <li>Graphical representation of the data</li>
 </ul></li>
 </ul>
 </div>
 </div>
-<div class="fragment fade-in-then-semi-out" data-fragment-index="6">
-<div class="absolute" style="top: 160px; left: 0px; ">
+<div class="fragment fade-in-then-out" data-fragment-index="6">
+<p><img data-src="images/ggplot2_7.png" class="absolute" style="top: 52px; right: 0px; width: 35%; "></p>
+<div class="absolute" style="top: 172px; left: 0px; ">
 <ul>
 <li><p>Layered approach to building graphics</p>
 <ul>
-<li><span style="color:rgba(255,255,255, 0">Data creates the base (tidy format)</span></li>
-<li><span style="color:rgba(255,255,255, 0">Link variables to graphical properties</span></li>
-<li><span style="color:rgba(255,255,255, 0">Transform data to displayed values</span></li>
-<li><span style="color:rgba(255,255,255, 0">Variable and property ranges</span></li>
-<li><span style="color:rgba(255,255,255, 0">Graphical representation of the data</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Data creates the base (tidy format)</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Link variables to graphical properties</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Transform data to displayed values</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Variable and property ranges</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Graphical representation of the data</span></li>
 <li>Creates “small multiples”</li>
 </ul></li>
 </ul>
 </div>
 </div>
-<div class="fragment fade-in-then-semi-out" data-fragment-index="7">
-<div class="absolute" style="top: 160px; left: 0px; ">
+<div class="fragment fade-in-then-out" data-fragment-index="7">
+<p><img data-src="images/ggplot2_8.png" class="absolute" style="top: 52px; right: 0px; width: 35%; "></p>
+<div class="absolute" style="top: 172px; left: 0px; ">
 <ul>
 <li><p>Layered approach to building graphics</p>
 <ul>
-<li><span style="color:rgba(255,255,255, 0">Data creates the base (tidy format)</span></li>
-<li><span style="color:rgba(255,255,255, 0">Link variables to graphical properties</span></li>
-<li><span style="color:rgba(255,255,255, 0">Transform data to displayed values</span></li>
-<li><span style="color:rgba(255,255,255, 0">Variable and property ranges</span></li>
-<li><span style="color:rgba(255,255,255, 0">Graphical representation of the data</span></li>
-<li><span style="color:rgba(255,255,255, 0">Creates “small multiples”</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Data creates the base (tidy format)</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Link variables to graphical properties</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Transform data to displayed values</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Variable and property ranges</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Graphical representation of the data</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Creates “small multiples”</span></li>
 <li>Sets unique position</li>
 </ul></li>
 </ul>
 </div>
 </div>
 <div class="fragment fade-in" data-fragment-index="8">
-<div class="absolute" style="top: 160px; left: 0px; ">
+<p><img data-src="images/ggplot2_9.png" class="absolute" style="top: 52px; right: 0px; width: 35%; "></p>
+<div class="absolute" style="top: 172px; left: 0px; ">
 <ul>
 <li><p>Layered approach to building graphics</p>
 <ul>
-<li><span style="color:rgba(255,255,255, 0">Data creates the base (tidy format)</span></li>
-<li><span style="color:rgba(255,255,255, 0">Link variables to graphical properties</span></li>
-<li><span style="color:rgba(255,255,255, 0">Transform data to displayed values</span></li>
-<li><span style="color:rgba(255,255,255, 0">Variable and property ranges</span></li>
-<li><span style="color:rgba(255,255,255, 0">Graphical representation of the data</span></li>
-<li><span style="color:rgba(255,255,255, 0">Creates “small multiples”</span></li>
-<li><span style="color:rgba(255,255,255, 0">Sets unique position</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Data creates the base (tidy format)</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Link variables to graphical properties</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Transform data to displayed values</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Variable and property ranges</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Graphical representation of the data</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Creates “small multiples”</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Sets unique position</span></li>
 <li>Defines the overall look of the plot</li>
 </ul></li>
 </ul>
 </div>
 </div>
+</section>
+<section id="the-layered-grammar-of-graphics-2" class="slide level2" data-menu-title="ggplot2">
+<h2>The (<span style="color:#edea2b"><strong>layered</strong></span>) Grammar of Graphics</h2>
+<p><img data-src="images/ggplot2_10.png" class="absolute" style="top: 52px; right: 0px; width: 35%; "></p>
+<ul>
+<li><p>Tidyverse package - <code>ggplot2</code></p></li>
+<li><p>Implementation of the grammar of graphics</p></li>
+<li><p>Layered approach to building graphics</p>
+<ul>
+<li>Required arguments</li>
+<li>Everything else has <span style="color:#edea2b"><strong>sensible defaults</strong></span></li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p><img data-src="images/ggplot.png" class="absolute" style="bottom: 150px; right: 0px; width: 35%; "></p>
+<ul>
+<li><p>Basic template has three functions:</p>
+<ul>
+<li><code>ggplot</code> - creates a blank canvas</li>
+<li><code>geom</code> - adds a layer</li>
+<li><code>aes</code> - visual properties of an object</li>
+</ul></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="topic-2" class="title-slide slide level1 center" data-menu-title="Topic 2">
+<h1>Topic 2</h1>
+<p><span style="font-size: 1.5em; text-align: center">Static Visualizations</span></p>
+</section>
+<section id="topic-2-static-visualizations" class="slide level2" data-menu-title="Faithful">
+<h2>Topic 2: Static Visualizations</h2>
+<p><img data-src="images/faithful_geyser.jpg" class="absolute" style="top: 52px; right: 0px; width: 30%; "></p>
+<ul>
+<li><p>Old Faithful dataset:</p>
+<ul>
+<li>Geyser in Yellowstone National Park</li>
+<li>Length of eruption time in minutes (eruptions)</li>
+<li>Time until next eruption (waiting)</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="column" style="width:60%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>tibble<span class="sc">::</span><span class="fu">as_tibble</span>(faithful)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 272 × 2
+   eruptions waiting
+       &lt;dbl&gt;   &lt;dbl&gt;
+ 1      3.6       79
+ 2      1.8       54
+ 3      3.33      74
+ 4      2.28      62
+ 5      4.53      85
+ 6      2.88      55
+ 7      4.7       88
+ 8      3.6       85
+ 9      1.95      51
+10      4.35      85
+# … with 262 more rows</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="topic-2-static-visualizations-1" class="slide level2" data-menu-title="ggplot">
+<h2>Topic 2: Static Visualizations</h2>
+<p><img data-src="images/ggplot2_10.png" class="absolute" style="top: 52px; right: 0px; width: 35%; "> <img data-src="images/ggplot.png" class="absolute" style="bottom: 150px; right: 0px; width: 35%; "></p>
+<ul>
+<li>Layered approach to building graphics:</li>
+</ul>
+<div class="fragment fade-in" data-fragment-index="1">
+<div class="column" style="width:60%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Load tidyverse into library</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="co"># Create a blank ggplot canvas</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="fu">ggplot</span>(<span class="at">data=</span>faithful)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="2" style="top: 90px; left: 100px; ">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-3-1.png" width="864"></p>
+</div>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="3">
+<div class="column" style="width:120;">
+<div class="absolute" style="top: 117px; left: 0px; ">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Load tidyverse into library</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co"># Create a blank ggplot canvas</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="fu">ggplot</span>(<span class="at">data=</span>faithful) <span class="sc">+</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co"># Add a geometric (geom) layer and map variables to     </span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="co"># aesthetics (aes) function</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="fu">geom_point</span>(<span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>eruptions,</span>
+<span id="cb4-10"><a href="#cb4-10"></a>                       <span class="at">y=</span>waiting))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="4" style="top: 90px; left: 100px; ">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-5-1.png" width="864"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="topic-2-static-visualizations-2" class="slide level2" data-menu-title="ggplot">
+<h2>Topic 2: Static Visualizations</h2>
+<p><img data-src="images/ggplot2_10.png" class="absolute" style="top: 52px; right: 0px; width: 35%; "> <img data-src="images/ggplot.png" class="absolute" style="bottom: 150px; right: 0px; width: 35%; "></p>
+<ul>
+<li><p>Layered approach to building graphics</p></li>
+<li><p>Some things to remember:</p>
+<ul>
+<li>Multiple ways to map variables</li>
+</ul>
+<div class="fragment">
+<ol type="1">
+<li>Split mappings</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>faithful) <span class="sc">+</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">geom_point</span>(<span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>eruptions,<span class="at">y=</span>waiting))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Mappings in <code>ggplot</code> function</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="at">data=</span>faithful,</span>
+<span id="cb6-3"><a href="#cb6-3"></a>  <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>eruptions,<span class="at">y=</span>waiting)) <span class="sc">+</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li>Mappings in <code>geom</code> function</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">geom_point</span>(</span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="at">data=</span>faithful,</span>
+<span id="cb7-4"><a href="#cb7-4"></a>  <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>eruptions,<span class="at">y=</span>waiting))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></li>
+</ul>
+</section>
+<section id="topic-2-static-visualizations-3" class="slide level2" data-menu-title="ggplot">
+<h2>Topic 2: Static Visualizations</h2>
+<p><img data-src="images/ggplot2_10.png" class="absolute" style="top: 52px; right: 0px; width: 35%; "> <img data-src="images/ggplot.png" class="absolute" style="bottom: 150px; right: 0px; width: 35%; "></p>
+<ul>
+<li>Layered approach to building graphics:</li>
+</ul>
+<div class="column" style="width:60%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Load tidyverse into library</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb8-3"><a href="#cb8-3"></a></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="co"># Create a blank ggplot canvas</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="fu">ggplot</span>(<span class="at">data=</span>faithful) <span class="sc">+</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a></span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="co"># Add a geometric (geom) layer and map variables to</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a><span class="co"># aesthetics (aes) function</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="fu">geom_point</span>(<span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>eruptions,</span>
+<span id="cb8-10"><a href="#cb8-10"></a>                       <span class="at">y=</span>waiting))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="1">
+<div class="column" style="width:120;">
+<div class="absolute" style="top: 117px; left: 0px; ">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># Load tidyverse into library</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb9-3"><a href="#cb9-3"></a></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="co"># Create a blank ggplot canvas</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="fu">ggplot</span>(<span class="at">data=</span>faithful) <span class="sc">+</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="co"># Add a geometric (geom) layer and map variables to     </span></span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="co"># aesthetics (aes) function</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a><span class="fu">geom_point</span>(<span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>eruptions,</span>
+<span id="cb9-10"><a href="#cb9-10"></a>                       <span class="at">y=</span>waiting,</span>
+<span id="cb9-11"><a href="#cb9-11"></a>                       <span class="at">color=</span>eruptions <span class="sc">&lt;</span> <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment fade-in absolute" data-fragment-index="2" style="top: 90px; left: 100px; ">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-11-1.png" width="864"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="topic-2-static-visualizations-4" class="slide level2" data-menu-title="ggplot">
+<h2>Topic 2: Static Visualizations</h2>
+<p><img data-src="images/ggplot2_10.png" class="absolute" style="top: 52px; right: 0px; width: 35%; "> <img data-src="images/ggplot.png" class="absolute" style="bottom: 150px; right: 0px; width: 35%; "></p>
+<ul>
+<li><p>Layered approach to building graphics</p></li>
+<li><p>Some things to remember:</p>
+<ul>
+<li>Multiple ways to map variables</li>
+<li>Multiple ways to change aesthetics</li>
+</ul>
+<div class="fragment" data-fragment-index="1">
+<ol type="1">
+<li><span style="color:#edea2b">Mapping</span> an aesthetic (e.g., color)</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>faithful) <span class="sc">+</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">geom_point</span>(<span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>eruptions,</span>
+<span id="cb10-3"><a href="#cb10-3"></a>                       <span class="at">y=</span>waiting,</span>
+<span id="cb10-4"><a href="#cb10-4"></a>                       <span class="at">color=</span>eruptions <span class="sc">&lt;</span> <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="2">
+<ol start="2" type="1">
+<li><span style="color:#edea2b">Setting</span> an aesthetic (e.g., color)</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>faithful) <span class="sc">+</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="fu">geom_point</span>(<span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>eruptions,</span>
+<span id="cb11-3"><a href="#cb11-3"></a>                       <span class="at">y=</span>waiting),</span>
+<span id="cb11-4"><a href="#cb11-4"></a>           <span class="at">color=</span><span class="st">'blue'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="4">
+<ol start="2" type="1">
+<li><span style="color:#edea2b">Setting</span> inside the <code>aes</code> function?</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>faithful) <span class="sc">+</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="fu">geom_point</span>(<span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>eruptions,</span>
+<span id="cb12-3"><a href="#cb12-3"></a>                       <span class="at">y=</span>waiting,</span>
+<span id="cb12-4"><a href="#cb12-4"></a>                       <span class="at">color=</span><span class="st">'blue'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></li>
+</ul>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="3" style="top: 90px; left: 100px; ">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-15-1.png" width="864"></p>
+</div>
+</div>
+</div>
+<div class="fragment fade-in absolute" data-fragment-index="5" style="top: 90px; left: 100px; ">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-16-1.png" width="864"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="topic-2-static-visualizations-5" class="slide level2" data-menu-title="ggplot">
+<h2>Topic 2: Static Visualizations</h2>
+<p><img data-src="images/ggplot2_10.png" class="absolute" style="top: 52px; right: 0px; width: 35%; "> <img data-src="images/ggplot.png" class="absolute" style="bottom: 150px; right: 0px; width: 35%; "></p>
+<ul>
+<li><p>Layered approach to building graphics</p></li>
+<li><p>Some things to remember:</p>
+<ul>
+<li><span style="color:rgba(255,255,255, 0.3">Multiple ways to map variables</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Multiple ways to change aesthetics</span></li>
+<li>Aesthetics vary by geometry</li>
+</ul>
+<div class="fragment" data-fragment-index="2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>faithful) <span class="sc">+</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">geom_point</span>(<span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>eruptions,</span>
+<span id="cb13-3"><a href="#cb13-3"></a>                       <span class="at">y=</span>waiting,</span>
+<span id="cb13-4"><a href="#cb13-4"></a>                       <span class="at">color=</span>eruptions <span class="sc">&lt;</span> <span class="dv">3</span>,</span>
+<span id="cb13-5"><a href="#cb13-5"></a>                       <span class="at">size=</span>waiting),</span>
+<span id="cb13-6"><a href="#cb13-6"></a>           <span class="at">alpha=</span><span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></li>
+</ul>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="1" style="top: 40px; left: 0px; ">
+<p><img data-src="images/geoms.png" width="650"></p>
+</div>
+<div class="fragment fade-in absolute" data-fragment-index="3" style="top: 90px; left: 100px; ">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-18-1.png" width="864"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="topic-2-static-visualizations-6" class="slide level2" data-menu-title="ggplot">
+<h2>Topic 2: Static Visualizations</h2>
+<p><img data-src="images/ggplot2_10.png" class="absolute" style="top: 52px; right: 0px; width: 35%; "> <img data-src="images/ggplot.png" class="absolute" style="bottom: 150px; right: 0px; width: 35%; "></p>
+<ul>
+<li><p>Layered approach to building graphics</p></li>
+<li><p>Some things to remember:</p>
+<ul>
+<li><span style="color:rgba(255,255,255, 0.3">Multiple ways to map variables</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Multiple ways to change aesthetics</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Aesthetics vary by geometry</span></li>
+<li>When stacking layers, order matters</li>
+</ul>
+<div class="fragment" data-fragment-index="1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># Stacking layers (point then linear fit)</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="fu">ggplot</span>(<span class="at">data=</span>faithful,</span>
+<span id="cb14-3"><a href="#cb14-3"></a>   <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>eruptions,<span class="at">y=</span>waiting)) <span class="sc">+</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">'lm'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment" data-fragment-index="3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># Stacking layers (linear fit then point)</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="fu">ggplot</span>(<span class="at">data=</span>faithful,</span>
+<span id="cb15-3"><a href="#cb15-3"></a>   <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>eruptions,<span class="at">y=</span>waiting)) <span class="sc">+</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">'lm'</span>) <span class="sc">+</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></li>
+</ul>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="2" style="top: 90px; left: 100px; ">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-21-1.png" width="864"></p>
+</div>
+</div>
+</div>
+<div class="fragment fade-in absolute" data-fragment-index="4" style="top: 90px; left: 100px; ">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-22-1.png" width="864"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="topic-2-static-visualizations-7" class="slide level2" data-menu-title="ggplot">
+<h2>Topic 2: Static Visualizations</h2>
+<p><img data-src="images/ggplot2_10.png" class="absolute" style="top: 52px; right: 0px; width: 35%; "> <img data-src="images/ggplot.png" class="absolute" style="bottom: 150px; right: 0px; width: 35%; "></p>
+<ul>
+<li><p>Layered approach to building graphics</p></li>
+<li><p>Some things to remember:</p>
+<ul>
+<li><span style="color:rgba(255,255,255, 0.3">Multiple ways to map variables</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Multiple ways to change aesthetics</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Aesthetics vary by geometry</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">When stacking layers, order matters</span></li>
+<li>Many types of geoms, with different<br> mapping requirements</li>
+</ul></li>
+</ul>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="1" style="top: 40px; left: 0px; ">
+<p><img data-src="images/geoms.png" width="650"></p>
+</div>
+</section>
+<section id="topic-2-static-visualizations-8" class="slide level2" data-menu-title="ggplot">
+<h2>Topic 2: Static Visualizations</h2>
+<p><img data-src="images/ggplot2_10.png" class="absolute" style="top: 52px; right: 0px; width: 35%; "> <img data-src="images/ggplot.png" class="absolute" style="bottom: 150px; right: 0px; width: 35%; "></p>
+<ul>
+<li><p>Layered approach to building graphics</p></li>
+<li><p>Some things to remember:</p>
+<ul>
+<li><span style="color:rgba(255,255,255, 0.3">Multiple ways to map variables</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Multiple ways to change aesthetics</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Aesthetics vary by geometry</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">When stacking layers, order matters</span></li>
+<li><span style="color:rgba(255,255,255, 0.3">Many types of geoms, with different<br> mapping requirements</span></li>
+<li>Many (many!) theme arguments</li>
+</ul></li>
+</ul>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="1" style="top: 40px; left: 0px; ">
+<p><img data-src="images/theme_args.png" style="width:60.0%"></p>
+</div>
+<div class="fragment fade-in absolute" data-fragment-index="2" style="top: 55px; left: 0px; ">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="co"># Create overall plot object</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>faithful,</span>
+<span id="cb16-3"><a href="#cb16-3"></a>               <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>eruptions,</span>
+<span id="cb16-4"><a href="#cb16-4"></a>                           <span class="at">y=</span>waiting)) <span class="sc">+</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a>    <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">"lm"</span>) <span class="sc">+</span></span>
+<span id="cb16-6"><a href="#cb16-6"></a>    <span class="fu">geom_point</span>(<span class="at">size=</span><span class="fl">0.5</span>)</span>
+<span id="cb16-7"><a href="#cb16-7"></a></span>
+<span id="cb16-8"><a href="#cb16-8"></a><span class="co"># Clean up overall plot theme</span></span>
+<span id="cb16-9"><a href="#cb16-9"></a>plot <span class="ot">&lt;-</span> plot <span class="sc">+</span></span>
+<span id="cb16-10"><a href="#cb16-10"></a>    <span class="fu">theme</span>(<span class="at">plot.background=</span><span class="fu">element_blank</span>(),</span>
+<span id="cb16-11"><a href="#cb16-11"></a>          <span class="at">panel.border=</span><span class="fu">element_blank</span>(),</span>
+<span id="cb16-12"><a href="#cb16-12"></a>          <span class="at">panel.background=</span><span class="fu">element_blank</span>(),</span>
+<span id="cb16-13"><a href="#cb16-13"></a>          <span class="at">axis.ticks=</span><span class="fu">element_line</span>(<span class="at">linewidth=</span><span class="fl">0.25</span>),</span>
+<span id="cb16-14"><a href="#cb16-14"></a>          <span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>),</span>
+<span id="cb16-15"><a href="#cb16-15"></a>          <span class="at">axis.line=</span><span class="fu">element_line</span>(<span class="at">linewidth=</span><span class="fl">0.25</span>),</span>
+<span id="cb16-16"><a href="#cb16-16"></a>          <span class="at">axis.title=</span><span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>),</span>
+<span id="cb16-17"><a href="#cb16-17"></a>          <span class="at">plot.title=</span><span class="fu">element_text</span>(<span class="at">hjust=</span>.<span class="dv">5</span>, <span class="at">size=</span><span class="dv">10</span>,</span>
+<span id="cb16-18"><a href="#cb16-18"></a>                                  <span class="at">face=</span><span class="st">'bold'</span>)) <span class="sc">+</span></span>
+<span id="cb16-19"><a href="#cb16-19"></a>    <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Old Faithful Waiting Time"</span>,</span>
+<span id="cb16-20"><a href="#cb16-20"></a>         <span class="at">x=</span><span class="st">"Length of eruption (minutes)"</span>,</span>
+<span id="cb16-21"><a href="#cb16-21"></a>         <span class="at">y=</span><span class="st">"Waiting time to next eruption (minutes)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment fade-in absolute" data-fragment-index="3" style="top: 90px; left: 100px; ">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-24-1.png" width="864"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-1---ggplot2" class="slide level2" data-background="#ffffff" data-menu-title="Exercise1">
+<h2>Exercise 1 - <code>ggplot2</code>:</h2>
+<ul>
+<li><p>We just learned that <code>ggplot2</code> is an implementation of the “Grammar of Graphics” that uses a layered approach.</p></li>
+<li></li>
+</ul>
 <div class="footer footer-default">
 
 </div>
@@ -745,6 +1237,48 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

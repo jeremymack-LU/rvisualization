@@ -112,92 +112,645 @@ The presentation is split into five topics:
 
 -   Implementation of the grammar of graphics
 
-::: {.fragment .fade-in-then-semi-out fragment-index=1} 
+::: {.fragment .fade-out fragment-index=1} 
+![](images/ggplot2_hex.png){.absolute top="52" right="0" width="30%"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=1} 
 -   Layered approach to building graphics
     
     - Data creates the base (tidy format)
+
+![](images/ggplot2_2.png){.absolute top="52" right="0" width="35%"}
 :::
 
-::: {.fragment .fade-in-then-semi-out fragment-index=2}  
-::: {.absolute top="160" left="0"}
+::: {.fragment .fade-in-then-out fragment-index=2}
+
+![](images/ggplot2_3.png){.absolute top="52" right="0" width="35%"}
+
+::: {.absolute top="172" left="0"}
 -   Layered approach to building graphics
     
-    - [Data creates the base (tidy format)]{style="color:rgba(255,255,255, 0"}
+    - [Data creates the base (tidy format)]{style="color:rgba(255,255,255, 0.3"}
     - Link variables to graphical properties
+    
 :::
 :::
 
-::: {.fragment .fade-in-then-semi-out fragment-index=3}  
-::: {.absolute top="160" left="0"}
+::: {.fragment .fade-in-then-out fragment-index=3}
+
+![](images/ggplot2_4.png){.absolute top="52" right="0" width="35%"}
+
+::: {.absolute top="172" left="0"}
 -   Layered approach to building graphics
     
-    - [Data creates the base (tidy format)]{style="color:rgba(255,255,255, 0"}
-    - [Link variables to graphical properties]{style="color:rgba(255,255,255, 0"}
+    - [Data creates the base (tidy format)]{style="color:rgba(255,255,255, 0.3"}
+    - [Link variables to graphical properties]{style="color:rgba(255,255,255, 0.3"}
     - Transform data to displayed values
+
 :::
 :::
 
-::: {.fragment .fade-in-then-semi-out fragment-index=4}  
-::: {.absolute top="160" left="0"}
+::: {.fragment .fade-in-then-out fragment-index=4}
+
+![](images/ggplot2_5.png){.absolute top="52" right="0" width="35%"}
+
+::: {.absolute top="172" left="0"}
 -   Layered approach to building graphics
     
-    - [Data creates the base (tidy format)]{style="color:rgba(255,255,255, 0"}
-    - [Link variables to graphical properties]{style="color:rgba(255,255,255, 0"}
-    - [Transform data to displayed values]{style="color:rgba(255,255,255, 0"}
+    - [Data creates the base (tidy format)]{style="color:rgba(255,255,255, 0.3"}
+    - [Link variables to graphical properties]{style="color:rgba(255,255,255, 0.3"}
+    - [Transform data to displayed values]{style="color:rgba(255,255,255, 0.3"}
     - Variable and property ranges
+
 :::
 :::
 
-::: {.fragment .fade-in-then-semi-out fragment-index=5}  
-::: {.absolute top="160" left="0"}
+::: {.fragment .fade-in-then-out fragment-index=5}
+
+![](images/ggplot2_6.png){.absolute top="52" right="0" width="35%"}
+
+::: {.absolute top="172" left="0"}
 -   Layered approach to building graphics
     
-    - [Data creates the base (tidy format)]{style="color:rgba(255,255,255, 0"}
-    - [Link variables to graphical properties]{style="color:rgba(255,255,255, 0"}
-    - [Transform data to displayed values]{style="color:rgba(255,255,255, 0"}
-    - [Variable and property ranges]{style="color:rgba(255,255,255, 0"}
+    - [Data creates the base (tidy format)]{style="color:rgba(255,255,255, 0.3"}
+    - [Link variables to graphical properties]{style="color:rgba(255,255,255, 0.3"}
+    - [Transform data to displayed values]{style="color:rgba(255,255,255, 0.3"}
+    - [Variable and property ranges]{style="color:rgba(255,255,255, 0.3"}
     - Graphical representation of the data
+
 :::
 :::
 
-::: {.fragment .fade-in-then-semi-out fragment-index=6}  
-::: {.absolute top="160" left="0"}
+::: {.fragment .fade-in-then-out fragment-index=6}
+
+![](images/ggplot2_7.png){.absolute top="52" right="0" width="35%"}
+
+::: {.absolute top="172" left="0"}
 -   Layered approach to building graphics
     
-    - [Data creates the base (tidy format)]{style="color:rgba(255,255,255, 0"}
-    - [Link variables to graphical properties]{style="color:rgba(255,255,255, 0"}
-    - [Transform data to displayed values]{style="color:rgba(255,255,255, 0"}
-    - [Variable and property ranges]{style="color:rgba(255,255,255, 0"}
-    - [Graphical representation of the data]{style="color:rgba(255,255,255, 0"}
+    - [Data creates the base (tidy format)]{style="color:rgba(255,255,255, 0.3"}
+    - [Link variables to graphical properties]{style="color:rgba(255,255,255, 0.3"}
+    - [Transform data to displayed values]{style="color:rgba(255,255,255, 0.3"}
+    - [Variable and property ranges]{style="color:rgba(255,255,255, 0.3"}
+    - [Graphical representation of the data]{style="color:rgba(255,255,255, 0.3"}
     - Creates "small multiples"
+
 :::
 :::
 
-::: {.fragment .fade-in-then-semi-out fragment-index=7}  
-::: {.absolute top="160" left="0"}
+::: {.fragment .fade-in-then-out fragment-index=7}
+
+![](images/ggplot2_8.png){.absolute top="52" right="0" width="35%"}
+
+::: {.absolute top="172" left="0"}
 -   Layered approach to building graphics
     
-    - [Data creates the base (tidy format)]{style="color:rgba(255,255,255, 0"}
-    - [Link variables to graphical properties]{style="color:rgba(255,255,255, 0"}
-    - [Transform data to displayed values]{style="color:rgba(255,255,255, 0"}
-    - [Variable and property ranges]{style="color:rgba(255,255,255, 0"}
-    - [Graphical representation of the data]{style="color:rgba(255,255,255, 0"}
-    - [Creates "small multiples"]{style="color:rgba(255,255,255, 0"}
+    - [Data creates the base (tidy format)]{style="color:rgba(255,255,255, 0.3"}
+    - [Link variables to graphical properties]{style="color:rgba(255,255,255, 0.3"}
+    - [Transform data to displayed values]{style="color:rgba(255,255,255, 0.3"}
+    - [Variable and property ranges]{style="color:rgba(255,255,255, 0.3"}
+    - [Graphical representation of the data]{style="color:rgba(255,255,255, 0.3"}
+    - [Creates "small multiples"]{style="color:rgba(255,255,255, 0.3"}
     - Sets unique position
+
 :::
 :::
 
-::: {.fragment .fade-in fragment-index=8}  
-::: {.absolute top="160" left="0"}
+::: {.fragment .fade-in fragment-index=8}
+
+![](images/ggplot2_9.png){.absolute top="52" right="0" width="35%"}
+
+::: {.absolute top="172" left="0"}
 -   Layered approach to building graphics
     
-    - [Data creates the base (tidy format)]{style="color:rgba(255,255,255, 0"}
-    - [Link variables to graphical properties]{style="color:rgba(255,255,255, 0"}
-    - [Transform data to displayed values]{style="color:rgba(255,255,255, 0"}
-    - [Variable and property ranges]{style="color:rgba(255,255,255, 0"}
-    - [Graphical representation of the data]{style="color:rgba(255,255,255, 0"}
-    - [Creates "small multiples"]{style="color:rgba(255,255,255, 0"}
-    - [Sets unique position]{style="color:rgba(255,255,255, 0"}
+    - [Data creates the base (tidy format)]{style="color:rgba(255,255,255, 0.3"}
+    - [Link variables to graphical properties]{style="color:rgba(255,255,255, 0.3"}
+    - [Transform data to displayed values]{style="color:rgba(255,255,255, 0.3"}
+    - [Variable and property ranges]{style="color:rgba(255,255,255, 0.3"}
+    - [Graphical representation of the data]{style="color:rgba(255,255,255, 0.3"}
+    - [Creates "small multiples"]{style="color:rgba(255,255,255, 0.3"}
+    - [Sets unique position]{style="color:rgba(255,255,255, 0.3"}
     - Defines the overall look of the plot
+
 :::
 :::
+
+## The ([**layered**]{style="color:#edea2b"}) Grammar of Graphics {data-menu-title="ggplot2"}
+
+![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
+
+-   Tidyverse package - `ggplot2`
+
+-   Implementation of the grammar of graphics
+
+-   Layered approach to building graphics
+
+    - Required arguments
+    - Everything else has [**sensible defaults**]{style="color:#edea2b"}
+    
+::: fragment
+
+![](images/ggplot.png){.absolute bottom="150" right="0" width="35%"}
+
+-   Basic template has three functions:
+
+    - `ggplot` - creates a blank canvas
+    - `geom` - adds a layer
+    - `aes` - visual properties of an object
+:::
+
+# Topic 2 {data-menu-title="Topic 2"}
+
+[Static Visualizations]{style="font-size: 1.5em; text-align: center"}
+
+## Topic 2: Static Visualizations {data-menu-title="Faithful"}
+![](images/faithful_geyser.jpg){.absolute top="52" right="0" width="30%"}
+
+-   Old Faithful dataset:
+
+    - Geyser in Yellowstone National Park
+    - Length of eruption time in minutes (eruptions)
+    - Time until next eruption (waiting)
+
+::: fragment
+::: {.column width="60%"}
+```{r}
+#| echo: true
+#| eval: true
+tibble::as_tibble(faithful)
+```
+:::
+:::
+
+## Topic 2: Static Visualizations {data-menu-title="ggplot"}
+![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
+![](images/ggplot.png){.absolute bottom="150" right="0" width="35%"}
+
+-   Layered approach to building graphics:
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.column width="60%"}
+```{r}
+#| echo: true
+#| eval: false
+# Load tidyverse into library
+library(tidyverse)
+
+# Create a blank ggplot canvas
+ggplot(data=faithful)
+```
+:::
+:::
+
+
+::: {.fragment .fade-in-then-out fragment-index=2 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+library(tidyverse)
+ggplot(data=faithful)
+```
+:::
+
+::: {.fragment .fade-in fragment-index=3}
+::: {.column width="120"}
+::: {.absolute top="117" left="0"}
+```{r}
+#| echo: true
+#| eval: false
+# Load tidyverse into library
+library(tidyverse)
+
+# Create a blank ggplot canvas
+ggplot(data=faithful) +
+
+# Add a geometric (geom) layer and map variables to     
+# aesthetics (aes) function
+geom_point(mapping=aes(x=eruptions,
+                       y=waiting))
+```
+:::
+:::
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=4 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+library(tidyverse)
+
+# Create a blank ggplot canvas
+ggplot(data=faithful) +
+
+# Add a geometric (geom) layer and map variables to
+# aesthetics (aes) function
+geom_point(mapping=aes(x=eruptions,
+                       y=waiting))
+```
+:::
+
+## Topic 2: Static Visualizations {data-menu-title="ggplot"}
+![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
+![](images/ggplot.png){.absolute bottom="150" right="0" width="35%"}
+
+-   Layered approach to building graphics
+
+-   Some things to remember:
+
+    - Multiple ways to map variables
+    
+    ::: fragment
+    1. Split mappings
+    ```{r}
+#| echo: true
+#| eval: false
+ggplot(data=faithful) +
+geom_point(mapping=aes(x=eruptions,y=waiting))
+```
+    :::
+    
+    ::: fragment
+    2. Mappings in `ggplot` function
+    ```{r}
+#| echo: true
+#| eval: false
+ggplot(
+  data=faithful,
+  mapping=aes(x=eruptions,y=waiting)) +
+geom_point()
+```
+    :::
+    
+    ::: fragment
+    3. Mappings in `geom` function
+    ```{r}
+#| echo: true
+#| eval: false
+ggplot() +
+geom_point(
+  data=faithful,
+  mapping=aes(x=eruptions,y=waiting))
+```
+    :::
+    
+## Topic 2: Static Visualizations {data-menu-title="ggplot"}
+![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
+![](images/ggplot.png){.absolute bottom="150" right="0" width="35%"}
+
+-   Layered approach to building graphics:
+
+::: {.column width="60%"}
+```{r}
+#| echo: true
+#| eval: false
+# Load tidyverse into library
+library(tidyverse)
+
+# Create a blank ggplot canvas
+ggplot(data=faithful) +
+
+# Add a geometric (geom) layer and map variables to
+# aesthetics (aes) function
+geom_point(mapping=aes(x=eruptions,
+                       y=waiting))
+```
+:::
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.column width="120"}
+::: {.absolute top="117" left="0"}
+```{r}
+#| echo: true
+#| eval: false
+# Load tidyverse into library
+library(tidyverse)
+
+# Create a blank ggplot canvas
+ggplot(data=faithful) +
+
+# Add a geometric (geom) layer and map variables to     
+# aesthetics (aes) function
+geom_point(mapping=aes(x=eruptions,
+                       y=waiting,
+                       color=eruptions < 3))
+```
+:::
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=2 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+library(tidyverse)
+
+# Create a blank ggplot canvas
+ggplot(data=faithful) +
+
+# Add a geometric (geom) layer and map variables to     
+# aesthetics (aes) function
+geom_point(mapping=aes(x=eruptions,
+                       y=waiting,
+                       color=eruptions < 3))
+```
+:::
+
+## Topic 2: Static Visualizations {data-menu-title="ggplot"}
+![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
+![](images/ggplot.png){.absolute bottom="150" right="0" width="35%"}
+
+-   Layered approach to building graphics
+
+-   Some things to remember:
+
+    - Multiple ways to map variables
+    - Multiple ways to change aesthetics
+    
+    ::: {.fragment fragment-index=1}
+    1. [Mapping]{style="color:#edea2b"} an aesthetic (e.g., color)
+    ```{r}
+#| echo: true
+#| eval: false
+ggplot(data=faithful) +
+    geom_point(mapping=aes(x=eruptions,
+                           y=waiting,
+                           color=eruptions < 3))
+```
+    :::
+    
+    ::: {.fragment fragment-index=2}
+    2. [Setting]{style="color:#edea2b"} an aesthetic (e.g., color) 
+    ```{r}
+#| echo: true
+#| eval: false
+ggplot(data=faithful) +
+    geom_point(mapping=aes(x=eruptions,
+                           y=waiting),
+               color='blue')
+```
+    :::
+    
+    ::: {.fragment fragment-index=4}
+    2. [Setting]{style="color:#edea2b"} inside the `aes` function?
+    ```{r}
+#| echo: true
+#| eval: false
+ggplot(data=faithful) +
+    geom_point(mapping=aes(x=eruptions,
+                           y=waiting,
+                           color='blue'))
+```
+    :::
+    
+::: {.fragment .fade-in-then-out fragment-index=3 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+library(tidyverse)
+
+# Create a blank ggplot canvas
+ggplot(data=faithful) +
+
+# Add a geometric (geom) layer and map variables to     
+# aesthetics (aes) function
+geom_point(mapping=aes(x=eruptions,
+                       y=waiting),
+                       color='blue')
+```
+:::
+
+::: {.fragment .fade-in fragment-index=5 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+library(tidyverse)
+
+# Create a blank ggplot canvas
+ggplot(data=faithful) +
+
+# Add a geometric (geom) layer and map variables to     
+# aesthetics (aes) function
+geom_point(mapping=aes(x=eruptions,
+                       y=waiting,
+                       color='blue'))
+```
+:::
+
+## Topic 2: Static Visualizations {data-menu-title="ggplot"}
+![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
+![](images/ggplot.png){.absolute bottom="150" right="0" width="35%"}
+
+-   Layered approach to building graphics
+
+-   Some things to remember:
+
+    - [Multiple ways to map variables]{style="color:rgba(255,255,255, 0.3"}
+    - [Multiple ways to change aesthetics]{style="color:rgba(255,255,255, 0.3"}
+    - Aesthetics vary by geometry
+    
+    ::: {.fragment fragment-index=2}
+    ```{r}
+#| echo: true
+#| eval: false
+ggplot(data=faithful) +
+    geom_point(mapping=aes(x=eruptions,
+                           y=waiting,
+                           color=eruptions < 3,
+                           size=waiting),
+               alpha=0.5)
+```
+    :::
+    
+::: {.fragment .fade-in-then-out fragment-index=1 .absolute top="40" left="0"}
+![](images/geoms.png){width="650"}
+:::
+
+::: {.fragment .fade-in fragment-index=3 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+ggplot(data=faithful) +
+    geom_point(mapping=aes(x=eruptions,
+                           y=waiting,
+                           color=eruptions < 3,
+                           size=waiting),
+               alpha=0.5)
+```
+:::
+
+## Topic 2: Static Visualizations {data-menu-title="ggplot"}
+![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
+![](images/ggplot.png){.absolute bottom="150" right="0" width="35%"}
+
+-   Layered approach to building graphics
+
+-   Some things to remember:
+
+    - [Multiple ways to map variables]{style="color:rgba(255,255,255, 0.3"}
+    - [Multiple ways to change aesthetics]{style="color:rgba(255,255,255, 0.3"}
+    - [Aesthetics vary by geometry]{style="color:rgba(255,255,255, 0.3"}
+    - When stacking layers, order matters
+    
+    ::: {.fragment fragment-index=1}
+    ```{r}
+#| echo: true
+#| eval: false
+# Stacking layers (point then linear fit)
+ggplot(data=faithful,
+       mapping=aes(x=eruptions,y=waiting)) +
+      geom_point() +
+      geom_smooth(method='lm')
+```
+    :::
+    
+    ::: {.fragment fragment-index=3}
+    ```{r}
+#| echo: true
+#| eval: false
+# Stacking layers (linear fit then point)
+ggplot(data=faithful,
+       mapping=aes(x=eruptions,y=waiting)) +
+      geom_smooth(method='lm') +
+      geom_point()
+```
+    :::
+    
+::: {.fragment .fade-in-then-out fragment-index=2 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+# Stacking layers (point then linear fit)
+ggplot(data=faithful,
+       mapping=aes(x=eruptions,y=waiting)) +
+      geom_point() +
+      geom_smooth(method='lm',size=4)
+```
+:::
+
+::: {.fragment .fade-in fragment-index=4 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+# Stacking layers (linear fit then point)
+ggplot(data=faithful,
+       mapping=aes(x=eruptions,y=waiting)) +
+      geom_smooth(method='lm',size=4) +
+      geom_point()
+```
+:::
+
+## Topic 2: Static Visualizations {data-menu-title="ggplot"}
+![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
+![](images/ggplot.png){.absolute bottom="150" right="0" width="35%"}
+
+-   Layered approach to building graphics
+
+-   Some things to remember:
+
+    - [Multiple ways to map variables]{style="color:rgba(255,255,255, 0.3"}
+    - [Multiple ways to change aesthetics]{style="color:rgba(255,255,255, 0.3"}
+    - [Aesthetics vary by geometry]{style="color:rgba(255,255,255, 0.3"}
+    - [When stacking layers, order matters]{style="color:rgba(255,255,255, 0.3"}
+    - Many types of geoms, with different</br> mapping requirements
+    
+::: {.fragment .fade-in-then-out fragment-index=1 .absolute top="40" left="0"}
+![](images/geoms.png){width="650"}
+:::
+
+## Topic 2: Static Visualizations {data-menu-title="ggplot"}
+![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
+![](images/ggplot.png){.absolute bottom="150" right="0" width="35%"}
+
+-   Layered approach to building graphics
+
+-   Some things to remember:
+
+    - [Multiple ways to map variables]{style="color:rgba(255,255,255, 0.3"}
+    - [Multiple ways to change aesthetics]{style="color:rgba(255,255,255, 0.3"}
+    - [Aesthetics vary by geometry]{style="color:rgba(255,255,255, 0.3"}
+    - [When stacking layers, order matters]{style="color:rgba(255,255,255, 0.3"}
+    - [Many types of geoms, with different</br> mapping requirements]{style="color:rgba(255,255,255, 0.3"}
+    - Many (many!) theme arguments
+    
+::: {.fragment .fade-in-then-out fragment-index=1 .absolute top="40" left="0"}
+![](images/theme_args.png){width="60%"}
+:::
+
+::: {.fragment .fade-in fragment-index=2 .absolute top="55" left="0"}
+```{r}
+#| echo: true
+#| eval: false
+# Create overall plot object
+plot <- ggplot(data=faithful,
+               mapping=aes(x=eruptions,
+                           y=waiting)) +
+    geom_smooth(method="lm") +
+    geom_point(size=0.5)
+
+# Clean up overall plot theme
+plot <- plot +
+    theme(plot.background=element_blank(),
+          panel.border=element_blank(),
+          panel.background=element_blank(),
+          axis.ticks=element_line(linewidth=0.25),
+          axis.text=element_text(size = 8),
+          axis.line=element_line(linewidth=0.25),
+          axis.title=element_text(size = 10),
+          plot.title=element_text(hjust=.5, size=10,
+                                  face='bold')) +
+    labs(title="Old Faithful Waiting Time",
+         x="Length of eruption (minutes)",
+         y="Waiting time to next eruption (minutes)")
+```
+:::
+
+::: {.fragment .fade-in fragment-index=3 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+# Create overall plot object
+plot <- ggplot(data=faithful,
+               mapping=aes(x=eruptions,
+                           y=waiting)) +
+    geom_smooth(method="lm") +
+    geom_point(size=1)
+
+# Clean up overall plot theme
+plot +
+    theme(plot.background=element_blank(),
+          panel.border=element_blank(),
+          panel.background=element_blank(),
+          axis.ticks=element_line(linewidth=0.25),
+          axis.text=element_text(size = 8),
+          axis.line=element_line(linewidth=0.25),
+          axis.title=element_text(size = 10),
+          plot.title=element_text(hjust=.5, size=10, face='bold')) +
+    labs(title="Old Faithful Waiting Time",
+         x="Length of eruption (minutes)",
+         y="Waiting time to next eruption (minutes)")
+```
+:::
+
+## Exercise 1 - `ggplot2`: {data-background="#ffffff" data-menu-title="Exercise1"}
+-   We just learned that `ggplot2` is an implementation of the "Grammar of Graphics" that uses a layered approach.
+
+-   
