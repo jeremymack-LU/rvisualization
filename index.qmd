@@ -92,7 +92,7 @@ The presentation is split into five topics:
 
 [The ([**layered**]{style="color:#edea2b"}) Grammar of Graphics]{style="font-size: 1.5em; text-align: center"}
 
-## The ([**layered**]{style="color:#edea2b"}) Grammar of Graphics {data-menu-title="Grammar of Graphics"}
+## Topic 1: The ([**layered**]{style="color:#edea2b"}) Grammar of Graphics {data-menu-title="Grammar of Graphics"}
 
 -   *The Grammar of Graphics*
 
@@ -106,7 +106,7 @@ The presentation is split into five topics:
 
 ![](images/grammar.png){.absolute top="52" right="0" width="30%"}
 
-## The ([**layered**]{style="color:#edea2b"}) Grammar of Graphics {data-menu-title="ggplot2"}
+## Topic 1: The ([**layered**]{style="color:#edea2b"}) Grammar of Graphics {data-menu-title="ggplot2"}
 
 -   Tidyverse package - `ggplot2`
 
@@ -236,7 +236,7 @@ The presentation is split into five topics:
 :::
 :::
 
-## The ([**layered**]{style="color:#edea2b"}) Grammar of Graphics {data-menu-title="ggplot2"}
+## Topic 1: The ([**layered**]{style="color:#edea2b"}) Grammar of Graphics {data-menu-title="ggplot2"}
 
 ![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
 
@@ -283,7 +283,7 @@ tibble::as_tibble(faithful)
 :::
 :::
 
-## Topic 2: Static Visualizations {data-menu-title="ggplot"}
+## Topic 2: Static Visualizations {data-menu-title="data"}
 ![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
 ![](images/ggplot.png){.absolute bottom="150" right="0" width="35%"}
 
@@ -354,7 +354,7 @@ geom_point(mapping=aes(x=eruptions,
 ```
 :::
 
-## Topic 2: Static Visualizations {data-menu-title="ggplot"}
+## Topic 2: Static Visualizations {data-menu-title="mapping aes"}
 ![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
 ![](images/ggplot.png){.absolute bottom="150" right="0" width="35%"}
 
@@ -398,7 +398,7 @@ geom_point(
     ```
     :::
     
-## Topic 2: Static Visualizations {data-menu-title="ggplot"}
+## Topic 2: Static Visualizations {data-menu-title="aes"}
 ![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
 ![](images/ggplot.png){.absolute bottom="150" right="0" width="35%"}
 
@@ -462,7 +462,7 @@ geom_point(mapping=aes(x=eruptions,
 ```
 :::
 
-## Topic 2: Static Visualizations {data-menu-title="ggplot"}
+## Topic 2: Static Visualizations {data-menu-title="map vs. set"}
 ![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
 ![](images/ggplot.png){.absolute bottom="150" right="0" width="35%"}
 
@@ -547,7 +547,7 @@ geom_point(mapping=aes(x=eruptions,
 ```
 :::
 
-## Topic 2: Static Visualizations {data-menu-title="ggplot"}
+## Topic 2: Static Visualizations {data-menu-title="aes"}
 ![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
 ![](images/ggplot.png){.absolute bottom="150" right="0" width="35%"}
 
@@ -591,7 +591,7 @@ ggplot(data=faithful) +
 ```
 :::
 
-## Topic 2: Static Visualizations {data-menu-title="ggplot"}
+## Topic 2: Static Visualizations {data-menu-title="stacking"}
 ![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
 ![](images/ggplot.png){.absolute bottom="150" right="0" width="35%"}
 
@@ -656,7 +656,7 @@ ggplot(data=faithful,
 ```
 :::
 
-## Topic 2: Static Visualizations {data-menu-title="ggplot"}
+## Topic 2: Static Visualizations {data-menu-title="geoms"}
 ![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
 ![](images/ggplot.png){.absolute bottom="150" right="0" width="35%"}
 
@@ -674,7 +674,7 @@ ggplot(data=faithful,
 ![](images/geoms.png){width="650"}
 :::
 
-## Topic 2: Static Visualizations {data-menu-title="ggplot"}
+## Topic 2: Static Visualizations {data-menu-title="theme"}
 ![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
 ![](images/ggplot.png){.absolute bottom="150" right="0" width="35%"}
 
@@ -754,7 +754,7 @@ plot +
 
 -   We just learned that `ggplot2` is an implementation of the "Grammar of Graphics" that uses a layered approach.
 
--   Complete the following script, to re-create the visualization of the relationship between penguin flipper length and body mass.
+-   Complete the following script, by replacing `??????s`, to re-create the visualization of the relationship between penguin flipper length and body mass.
 
 :::: columns
 ::: {.column width='45%'}
@@ -789,7 +789,7 @@ penguins |>
     labs(x='Flipper length (mm)',
          y=??????) +
     theme_minimal() +
-    theme(legend.position = ??????)
+    theme(legend.position=??????)
 ```
 :::
 ::: {.column width='55%'}
@@ -820,3 +820,810 @@ penguins |>
 ```
 :::
 ::::
+
+# Topic 2 {data-menu-title="Topic 2"}
+
+[Static Visualizations - ggplot2 extensions]{style="font-size: 1.5em; text-align: center"}
+
+## Topic 2: Static Visualizations - ggplot2 extensions {data-menu-title="extensions"}
+
+-   `ggplot2` extensions
+
+-   Extends the grammar of graphics
+
+    - Developed by R users
+    - Provides additional [functionality](https://exts.ggplot2.tidyverse.org/gallery/)
+
+![](images/ggplot2_hex.png){.absolute top="52" right="0" width="30%"}
+
+## Topic 2: Static Visualizations - ggplot2 extensions {data-menu-title="patchwork"}
+
+-   `ggplot2` extensions
+
+-   Extends the grammar of graphics
+
+    - Developed by R users
+    - Provides additional [functionality](https://exts.ggplot2.tidyverse.org/gallery/)
+
+-   `patchwork`
+
+    - Arrange multiple plots, using mathematical operators
+    - Many approaches:
+        - gridExtra::grid.arrange()
+        - ggpubr::ggarrange()
+        - cowplot::plot_grid()
+
+![](images/patchwork_hex.png){.absolute top="52" right="0" width="30%"}
+![](images/patchwork.png){.absolute bottom="0" right="0" width="35%"}
+
+## Topic 2: Static Visualizations - ggplot2 extensions {data-menu-title="patchwork1"}
+
+:::: columns
+::: {.column width="50%"}
+-   Establish plots:
+```{r style="font-size: 0.85em"}
+#| echo: true
+#| eval: false
+# Plot 1
+plot1 <- penguins |> 
+  drop_na() |> 
+  ggplot(aes(x=flipper_length_mm,y=body_mass_g)) +
+  geom_point(aes(color=species)) +
+  geom_smooth(method='lm') +
+  theme_minimal() +
+  theme(legend.position='top',
+        legend.title=element_blank())
+
+# Plot 2
+plot2 <- penguins |> 
+  drop_na() |>
+  ggplot(aes(x=species,y=body_mass_g)) +
+  geom_boxplot(aes(color=species)) +
+  theme_minimal() +
+  theme(legend.position='none',
+        legend.title=element_blank())
+```
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="49%"}
+-   Patchwork together:
+```{r}
+#| echo: true
+#| eval: false
+library(patchwork)
+
+# Side by side
+plot1 + plot2
+```
+:::
+::::
+
+::: {.fragment .fade-in-then-out fragment-index=1 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+library(palmerpenguins)
+library(patchwork)
+
+# Plot 1
+plot1 <- penguins |> 
+  drop_na() |> 
+  ggplot(aes(x=flipper_length_mm,
+             y=body_mass_g)) +
+  geom_point(aes(color=species)) +
+  geom_smooth(method='lm') +
+  theme_minimal() +
+  theme(legend.position='top',
+        legend.title=element_blank())
+
+# Plot 2
+plot2 <- penguins |> 
+  drop_na() |>
+  ggplot(aes(x=species,
+             y=body_mass_g)) +
+  geom_boxplot(aes(color=species)) +
+  theme_minimal() +
+  theme(legend.position='none',
+        legend.title=element_blank())
+
+plot1 + plot2
+```
+:::
+
+## Topic 2: Static Visualizations - ggplot2 extensions {data-menu-title="patchwork2"}
+
+:::: columns
+::: {.column width="50%"}
+-   Establish plots:
+```{r style="font-size: 0.85em"}
+#| echo: true
+#| eval: false
+# Plot 1
+plot1 <- penguins |> 
+  drop_na() |> 
+  ggplot(aes(x=flipper_length_mm,y=body_mass_g)) +
+  geom_point(aes(color=species)) +
+  geom_smooth(method='lm') +
+  theme_minimal() +
+  theme(legend.position='top',
+        legend.title=element_blank())
+
+# Plot 2
+plot2 <- penguins |> 
+  drop_na() |>
+  ggplot(aes(x=species,y=body_mass_g)) +
+  geom_boxplot(aes(color=species)) +
+  theme_minimal() +
+  theme(legend.position='none',
+        legend.title=element_blank())
+```
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="49%"}
+-   Patchwork together:
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "6-7"
+library(patchwork)
+
+# Side by side
+plot1 + plot2
+
+# Stacked
+plot1 / plot2
+```
+:::
+::::
+
+::: {.fragment .fade-in-then-out fragment-index=1 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+library(palmerpenguins)
+library(patchwork)
+
+# Plot 1
+plot1 <- penguins |> 
+  drop_na() |> 
+  ggplot(aes(x=flipper_length_mm,
+             y=body_mass_g)) +
+  geom_point(aes(color=species)) +
+  geom_smooth(method='lm') +
+  theme_minimal() +
+  theme(legend.position='top',
+        legend.title=element_blank())
+
+# Plot 2
+plot2 <- penguins |> 
+  drop_na() |>
+  ggplot(aes(x=species,
+             y=body_mass_g)) +
+  geom_boxplot(aes(color=species)) +
+  theme_minimal() +
+  theme(legend.position='none',
+        legend.title=element_blank())
+
+plot1 / plot2
+```
+:::
+
+## Topic 2: Static Visualizations - ggplot2 extensions {data-menu-title="patchwork3"}
+
+:::: columns
+::: {.column width="50%"}
+-   Establish plots:
+```{r style="font-size: 0.85em"}
+#| echo: true
+#| eval: false
+# Plot 1
+plot1 <- penguins |> 
+  drop_na() |> 
+  ggplot(aes(x=flipper_length_mm,y=body_mass_g)) +
+  geom_point(aes(color=species)) +
+  geom_smooth(method='lm') +
+  theme_minimal() +
+  theme(legend.position='top',
+        legend.title=element_blank())
+
+# Plot 2
+plot2 <- penguins |> 
+  drop_na() |>
+  ggplot(aes(x=species,y=body_mass_g)) +
+  geom_boxplot(aes(color=species)) +
+  theme_minimal() +
+  theme(legend.position='none',
+        legend.title=element_blank())
+
+# Plot 3
+plot3 <- penguins |> 
+  drop_na() |>
+  ggplot(aes(x=body_mass_g,fill=species)) +
+  geom_histogram(alpha=0.5,position="identity") +
+  theme_minimal() +
+  theme(legend.position='none',
+        legend.title=element_blank())
+```
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="49%"}
+-   Patchwork together:
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "9-10"
+library(patchwork)
+
+# Side by side
+plot1 + plot2
+
+# Stacked
+plot1 / plot2
+
+# Side by side and stacked
+(plot1 + plot2) / plot3
+```
+:::
+::::
+
+::: {.fragment .fade-in-then-out fragment-index=1 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+library(palmerpenguins)
+library(patchwork)
+
+penguins <- penguins |> drop_na()
+
+plot1 <- ggplot(data=penguins,
+                aes(x=flipper_length_mm,
+                    y=body_mass_g)) +
+    geom_point(aes(color=species)) +
+    geom_smooth(method='lm') +
+    theme_minimal() +
+    theme(legend.position='top',
+          legend.title=element_blank()) 
+
+plot2 <- ggplot(data=penguins,
+                aes(x=species,
+                    y=body_mass_g)) +
+    geom_boxplot(aes(color=species)) +
+    theme_minimal() +
+    theme(legend.position='none',
+          legend.title=element_blank())
+
+# Plot 3
+plot3 <- ggplot(data=penguins,
+                aes(x=body_mass_g,
+                    fill=species)) +
+  geom_histogram(alpha=0.5, 
+                 position="identity") +
+  theme_minimal() +
+  theme(legend.position='none',
+        legend.title=element_blank())
+    
+(plot1 + plot2) / plot3
+```
+:::
+
+## Topic 2: Static Visualizations - ggplot2 extensions {data-menu-title="patchwork4"}
+
+:::: columns
+::: {.column width="50%"}
+-   Establish plots:
+```{r style="font-size: 0.85em"}
+#| echo: true
+#| eval: false
+# Plot 1
+plot1 <- penguins |> 
+  drop_na() |> 
+  ggplot(aes(x=flipper_length_mm,y=body_mass_g)) +
+  geom_point(aes(color=species)) +
+  geom_smooth(method='lm') +
+  theme_minimal() +
+  theme(legend.position='top',
+        legend.title=element_blank())
+
+# Plot 2
+plot2 <- penguins |> 
+  drop_na() |>
+  ggplot(aes(x=species,y=body_mass_g)) +
+  geom_boxplot(aes(color=species)) +
+  theme_minimal() +
+  theme(legend.position='none',
+        legend.title=element_blank())
+
+# Plot 3
+plot3 <- penguins |> 
+  drop_na() |>
+  ggplot(aes(x=body_mass_g,fill=species)) +
+  geom_histogram(alpha=0.5,position="identity") +
+  theme_minimal() +
+  theme(legend.position='none',
+        legend.title=element_blank())
+```
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="49%"}
+-   Patchwork together:
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "12-14"
+library(patchwork)
+
+# Side by side
+plot1 + plot2
+
+# Stacked
+plot1 / plot2
+
+# Side by side and stacked
+(plot1 + plot2) / plot3
+
+# Side by side and stacked, with layout
+(plot1 + plot2) / plot3 + 
+  plot_layout(heights=c(2,1))
+```
+:::
+::::
+
+::: {.fragment .fade-in-then-out fragment-index=1 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+library(palmerpenguins)
+library(patchwork)
+
+penguins <- penguins |> drop_na()
+
+plot1 <- ggplot(data=penguins,
+                aes(x=flipper_length_mm,
+                    y=body_mass_g)) +
+    geom_point(aes(color=species)) +
+    geom_smooth(method='lm') +
+    theme_minimal() +
+    theme(legend.position='top',
+          legend.title=element_blank()) 
+
+plot2 <- ggplot(data=penguins,
+                aes(x=species,
+                    y=body_mass_g)) +
+    geom_boxplot(aes(color=species)) +
+    theme_minimal() +
+    theme(legend.position='none',
+          legend.title=element_blank())
+
+# Plot 3
+plot3 <- ggplot(data=penguins,
+                aes(x=body_mass_g,
+                    fill=species)) +
+  geom_histogram(alpha=0.5, 
+                 position="identity") +
+  theme_minimal() +
+  theme(legend.position='none',
+        legend.title=element_blank())
+    
+(plot1 + plot2) / plot3 + plot_layout(heights=c(2,1))
+```
+:::
+
+## Topic 2: Static Visualizations - ggplot2 extensions {data-menu-title="ggthemes"}
+![](images/ggforce_hex.png){.absolute top="52" right="0" width="30%"}
+
+-   `ggplot2` extensions
+
+-   Extends the grammar of graphics
+
+    - Developed by R users
+    - Provides additional [functionality](https://exts.ggplot2.tidyverse.org/gallery/)
+
+-   `patchwork`
+
+-   `ggforce` and `ggthemes`
+
+    - Provides extra geoms, scales, and themes
+    
+::: {.fragment .fade-in fragment-index=1}
+::: {.column width="65%"}
+```{r}
+#| echo: true
+#| eval: false
+install.packages(ggthemes); library(ggthemes)
+# Excel theme
+p1 <- ggplot(data=penguins) +
+    geom_point(aes(x=flipper_length_mm,
+                   y=body_mass_g)) +
+    theme_excel()
+# Wall Street Journal theme
+p2 <- p1 + theme_wsj()
+# Google Docs theme
+p3 <- p1 + theme_gdocs()
+# Clean ggplot theme
+p4 <- p1 + theme_clean()
+# Patchwork
+(p1 + p2) / (p3 + p4)
+```
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=2 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+library(palmerpenguins)
+library(patchwork)
+library(ggthemes)
+
+p1 <- ggplot(data=penguins) +
+    geom_point(aes(x=flipper_length_mm,
+                   y=body_mass_g)) +
+    theme_excel()
+# Wall Street Journal theme
+p2 <- p1 + theme_wsj()
+# Google Docs theme
+p3 <- p1 + theme_gdocs()
+# Clean ggplot theme
+p4 <- p1 + theme_clean()
+# Patchwork
+(p1 + p2) / (p3 + p4)
+```
+:::
+
+## Topic 2: Static Visualizations - ggplot2 extensions {data-menu-title="ggstatsplot"}
+![](images/ggstats_hex.png){.absolute top="52" right="0" width="30%"}
+
+-   `ggplot2` extensions
+
+-   Extends the grammar of graphics
+
+    - Developed by R users
+    - Provides additional [functionality](https://exts.ggplot2.tidyverse.org/gallery/)
+
+-   `patchwork`
+
+-   `ggforce` and `ggthemes`
+
+-   `ggstatsplot`
+
+    - Quickly combine plots with statistics
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.column width="65%"}
+```{r}
+#| echo: true
+#| eval: false
+install.packages(ggstatsplot); library(ggstatsplot)
+
+# Scatter plot stats
+ggscatterstats(
+    data=penguins,
+    x=flipper_length_mm,
+    y=body_mass_g,
+    xlab="Flipper length (mm)",
+    ylab="Body mass (g)",
+    title="Relationship between penguin size and weight")
+```
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=2 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+library(ggstatsplot)
+
+# Scatter plot stats
+ggscatterstats(
+    data=penguins,
+    x=flipper_length_mm,
+    y=body_mass_g,
+    xlab="Flipper length (mm)",
+    ylab="Body mass (g)",
+    title="Relationship between penguin size and weight")
+```
+:::
+
+# Topic 3 {data-menu-title="Topic 3"}
+
+[Dynamic Visualizations]{style="font-size: 1.5em; text-align: center"}
+
+## Topic 3: Dynamic Visualizations {data-menu-title="animation"}
+
+![](images/gapminder.gif)
+
+## Topic 3: Dynamic Visualizations {data-menu-title="gapminder"}
+![](images/gapminder2.png){.absolute top="52" right="0" width="350"}
+
+-   Life expectancy (`gapminder`) dataset:
+
+    - Data from the Gapminder foundation
+    - Geography (country and continent)
+    - Demographic data (lifeExp and pop)
+    - Economic data (gdpPercap)
+    - Time (year)
+    
+::: {.column width="65%"}
+```{r}
+#| echo: true
+#| eval: false
+install.packages('gapminder')
+library(gapminder)
+
+slice_head(gapminder, n=5)
+```
+
+```{r}
+#| echo: false
+#| eval: true
+library(gapminder)
+slice_head(gapminder, n=5)
+```
+:::
+
+## Topic 3: Dynamic Visualizations {data-menu-title="gganimate"}
+![](images/gganimate_hex.png){.absolute top="52" right="0" width="30%"}
+
+-   `ggplot2` extensions
+
+-   Extends the grammar of graphics
+
+    - Developed by R users
+    - Provides additional [functionality](https://exts.ggplot2.tidyverse.org/gallery/)
+
+-   `patchwork`
+
+-   `ggforce` and `ggthemes`
+
+-   `ggstatsplot`
+
+-   `gganimate`
+
+    - New grammar classes (functions)
+    - How a plot should change with time
+
+## Topic 3: Dynamic Visualizations {data-menu-title="gganimate" auto-animate="true"}
+
+```{r style="font-size: 0.85em"}
+#| echo: true
+#| eval: false
+# Use the gapminder dataset in ggplot
+anim <- ggplot(data=gapminder,
+               aes(x=gdpPercap, y=lifeExp, size=pop, color=country)) +
+    # Add a point geom
+    geom_point(alpha=0.7, show.legend=FALSE)
+
+anim
+```
+
+::: {.fragment .fade-in fragment-index=1 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+# Use the gapminder dataset in ggplot
+anim <- ggplot(data=gapminder,
+               aes(x=gdpPercap, y=lifeExp, size=pop, color=country)) +
+    # Add a point geom
+    geom_point(alpha=0.7, show.legend=FALSE)
+
+anim
+```
+:::
+
+## Topic 3: Dynamic Visualizations {data-menu-title="gganimate" auto-animate="true"}
+
+```{r style="font-size: 0.85em"}
+#| echo: true
+#| eval: false
+# Use the gapminder dataset in ggplot
+anim <- ggplot(data=gapminder,
+               aes(x=gdpPercap, y=lifeExp, size=pop, color=country)) +
+    # Add a point geom
+    geom_point(alpha=0.7, show.legend=FALSE) +
+    # Add some manual scaling and facets
+    scale_colour_manual(values=country_colors) +
+    scale_size(range=c(2, 12)) +
+    scale_x_log10() +
+    facet_wrap(~continent, nrow=1)
+
+anim
+```
+
+::: {.fragment .fade-in fragment-index=1 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+# Use the gapminder dataset in ggplot
+anim <- ggplot(data=gapminder,
+               aes(x=gdpPercap, y=lifeExp, size=pop, color=country)) +
+    # Add a point geom
+    geom_point(alpha=0.7, show.legend=FALSE) +
+    # Add some manual scaling and facets
+    scale_colour_manual(values=country_colors) +
+    scale_size(range=c(2, 12)) +
+    scale_x_log10() +
+    facet_wrap(~continent, nrow=1)
+
+anim
+```
+:::
+
+## Topic 3: Dynamic Visualizations {data-menu-title="gganimate" auto-animate="true"}
+
+```{r style="font-size: 0.85em"}
+#| echo: true
+#| eval: false
+# Use the gapminder dataset in ggplot
+anim <- ggplot(data=gapminder,
+               aes(x=gdpPercap, y=lifeExp, size=pop, color=country)) +
+    # Add a point geom
+    geom_point(alpha=0.7, show.legend=FALSE) +
+    # Add some manual scaling and facets
+    scale_colour_manual(values=country_colors) +
+    scale_size(range=c(2, 12)) +
+    scale_x_log10() +
+    facet_wrap(~continent, nrow=1) +
+    # Animate figure with gganimate package
+    transition_time(year) +
+    ease_aes('linear') +
+    labs(title='Year: {frame_time}', 
+         x='GDP per capita', 
+         y='Life expectancy at birth') +
+
+anim
+```
+
+::: {.fragment .fade-in fragment-index=1 .absolute top="90" left="100"}
+![](images/gapminder_gif1.gif)
+:::
+
+## Topic 3: Dynamic Visualizations {data-menu-title="gganimate" auto-animate="true"}
+
+```{r style="font-size: 0.85em"}
+#| echo: true
+#| eval: false
+# Use the gapminder dataset in ggplot
+anim <- ggplot(data=gapminder,
+               aes(x=gdpPercap, y=lifeExp, size=pop, color=country)) +
+    # Add a point geom
+    geom_point(alpha=0.7, show.legend=FALSE) +
+    # Add some manual scaling and facets
+    scale_colour_manual(values=country_colors) +
+    scale_size(range=c(2, 12)) +
+    scale_x_log10() +
+    facet_wrap(~continent, nrow=1) +
+    # Animate figure with gganimate package
+    transition_time(year) +
+    ease_aes('linear') +
+    labs(title='Year: {frame_time}', 
+         x='GDP per capita', 
+         y='Life expectancy at birth') +
+    # Add some theme
+    theme(panel.background=element_rect(color="black", fill="lightyellow", size=0.25),
+          panel.grid=element_blank(),
+          plot.title=element_text(size=9, color="black"),
+          strip.background=element_rect(color="black", size=0.25),
+          axis.ticks=element_line(size=0.25),
+          axis.text=element_text(size=7, color="black"),
+          axis.title=element_text(size=8, color="black"))
+
+# Export animated gif
+options(gganimate.dev_args = list(width = 2100, height = 900, res = 300))
+anim_save(anim, filename="gapminder.gif")
+
+```
+
+::: {.fragment .fade-in fragment-index=1 .absolute top="90" left="100"}
+![](images/gapminder.gif)
+:::
+
+# Topic 3 {data-menu-title="Topic 3"}
+
+[Dynamic Visualizations - ggplot2 integrations]{style="font-size: 1.5em; text-align: center"}
+
+## Topic 3: Dynamic Visualizations - ggplot2 integrations {data-menu-title="integrations"}
+
+-   `ggplot2` integrations
+
+-   Packages that integrate with `ggplot2` objects
+
+    - Used as required arguments
+
+![](images/ggplot2_hex.png){.absolute top="52" right="0" width="30%"}
+
+## Topic 3: Dynamic Visualizations - ggplot2 integrations {data-menu-title="integrations"}
+
+-   `ggplot2` integrations
+
+-   Packages that integrate with `ggplot2` objects
+
+    - Used as required arguments
+
+-   `plotly`
+
+    - Creates interactive web graphics
+    - Customizable user interface
+
+![](images/plotly_logo.png){.absolute top="52" right="0" width="30%"}
+
+## Topic 3: Dynamic Visualizations - ggplot2 integrations {data-menu-title="integrations"}
+
+```{css, echo = FALSE}
+.output {
+max-height: 800px;
+overflow-y: visible;
+}
+```
+
+```{r}
+#| echo: false
+#| eval: true
+#| class: output
+library(plotly)
+library(widgetframe)
+theme <- theme(panel.background=element_rect(color="black", fill="lightyellow", size=0.25),
+               panel.grid=element_blank(),
+               plot.title=element_text(size=9, color="black"),
+               strip.background=element_rect(color="black", size=0.25),
+               axis.ticks=element_line(size=0.25),
+               axis.text=element_text(size=7, color="black"),
+               axis.title=element_text(size=8, color="black"),
+               legend.title=element_text(size=8, color="black"),
+               legend.text=element_text(size=7, color="black"),
+               legend.justification="top",
+               legend.key=element_rect(color="black", fill="lightyellow", size=0.1))
+
+p9 <- ggplot(data=gapminder, 
+             aes(x=gdpPercap, y=lifeExp, size=pop, color=continent)) +
+    # Add a point geom
+    geom_point(alpha=0.7, show.legend=FALSE, aes(frame = year, ids = country)) +
+    # Add some manual scaling
+    scale_colour_manual(values=continent_colors) +
+    scale_size(range=c(2, 12)) +
+    scale_x_log10() +
+    labs(x='GDP per capita', 
+         y='Life expectancy at birth') +
+    theme
+
+fig <- ggplotly(p9, height=500, width=800) %>%
+    animation_opts(
+        1000, easing = "linear", redraw = FALSE) %>%
+    animation_slider(
+        currentvalue=list(prefix="YEAR ",
+                          font=list(color="red"),
+                          xanchor='left',
+                          yanchor='top')) %>%
+    animation_button(
+        x = 1, xanchor = "right", y = -0.2, yanchor = "bottom"
+    )
+fig
+#frameWidget(fig, height=550, width=800)
+```
