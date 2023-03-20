@@ -1526,7 +1526,7 @@ anim <- ggplot(data=gapminder,
     labs(title='Year: {frame_time}', 
          x='GDP per capita', 
          y='Life expectancy at birth') +
-    # Add some theme
+    # Add some theme elements
     theme(panel.background=element_rect(color="black", fill="lightyellow", size=0.25),
           panel.grid=element_blank(),
           plot.title=element_text(size=9, color="black"),
@@ -1559,7 +1559,7 @@ anim_save(anim, filename="gapminder.gif")
 
 ![](images/ggplot2_hex.png){.absolute top="52" right="0" width="30%"}
 
-## Topic 3: Dynamic Visualizations - ggplot2 integrations {data-menu-title="integrations"}
+## Topic 3: Dynamic Visualizations - ggplot2 integrations {data-menu-title="plotly"}
 
 -   `ggplot2` integrations
 
@@ -1574,46 +1574,37 @@ anim_save(anim, filename="gapminder.gif")
 
 ![](images/plotly_logo.png){.absolute top="52" right="0" width="30%"}
 
-## Topic 3: Dynamic Visualizations - ggplot2 integrations {data-menu-title="integrations"}
+## Topic 3: Dynamic Visualizations - ggplot2 integrations {data-menu-title="plotly"}
 
-```{css, echo = FALSE}
-.output {
-max-height: 800px;
-overflow-y: visible;
-}
-```
-
+::: {.fragment .fade-in fragment-index=1 .absolute top="90" left="100"}
 ```{r}
 #| echo: false
 #| eval: true
-#| class: output
-library(plotly)
-library(widgetframe)
-theme <- theme(panel.background=element_rect(color="black", fill="lightyellow", size=0.25),
-               panel.grid=element_blank(),
-               plot.title=element_text(size=9, color="black"),
-               strip.background=element_rect(color="black", size=0.25),
-               axis.ticks=element_line(size=0.25),
-               axis.text=element_text(size=7, color="black"),
-               axis.title=element_text(size=8, color="black"),
-               legend.title=element_text(size=8, color="black"),
-               legend.text=element_text(size=7, color="black"),
-               legend.justification="top",
-               legend.key=element_rect(color="black", fill="lightyellow", size=0.1))
+#| fig-width: 9
+#| fig-height: 6
 
-p9 <- ggplot(data=gapminder, 
-             aes(x=gdpPercap, y=lifeExp, size=pop, color=continent)) +
+library(plotly)
+plot <- ggplot(data=gapminder, 
+               aes(x=gdpPercap, y=lifeExp, size=pop, color=continent)) +
     # Add a point geom
-    geom_point(alpha=0.7, show.legend=FALSE, aes(frame = year, ids = country)) +
+    geom_point(alpha=0.7, show.legend=FALSE, aes(frame=year, ids=country)) +
     # Add some manual scaling
     scale_colour_manual(values=continent_colors) +
     scale_size(range=c(2, 12)) +
     scale_x_log10() +
     labs(x='GDP per capita', 
          y='Life expectancy at birth') +
-    theme
+    # Add some theme elements
+    theme(panel.background=element_rect(color="black", fill="lightyellow", size=0.25),
+          panel.grid=element_blank(),
+          plot.title=element_text(size=9, color="black"),
+          strip.background=element_rect(color="black", size=0.25),
+          axis.ticks=element_line(size=0.25),
+          axis.text=element_text(size=7, color="black"),
+          axis.title=element_text(size=8, color="black"))
 
-fig <- ggplotly(p9, height=500, width=800) %>%
+# Pass ggplot object to plotly
+plotly <- ggplotly(plot, height=500, width=800) %>%
     animation_opts(
         1000, easing = "linear", redraw = FALSE) %>%
     animation_slider(
@@ -1624,6 +1615,283 @@ fig <- ggplotly(p9, height=500, width=800) %>%
     animation_button(
         x = 1, xanchor = "right", y = -0.2, yanchor = "bottom"
     )
-fig
-#frameWidget(fig, height=550, width=800)
+plotly
 ```
+:::
+
+## Topic 3: Dynamic Visualizations {data-menu-title="plotly" auto-animate="true"}
+
+```{r style="font-size: 0.85em"}
+#| echo: true
+#| eval: false
+# Create ggplot object with gapminder data
+plot <- ggplot(data=gapminder, 
+               aes(x=gdpPercap, y=lifeExp, size=pop, color=continent)) +
+    # Add a point geom
+    geom_point(alpha=0.7, show.legend=FALSE, aes(frame=year, ids=country)) +
+    # Add some manual scaling
+    scale_colour_manual(values=continent_colors) +
+    scale_size(range=c(2, 12)) +
+    scale_x_log10() +
+    labs(x='GDP per capita', 
+         y='Life expectancy at birth')
+```
+
+::: {.fragment .fade-in fragment-index=1 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+# Create ggplot object with gapminder data
+plot <- ggplot(data=gapminder, 
+               aes(x=gdpPercap, y=lifeExp, size=pop, color=continent)) +
+    # Add a point geom
+    geom_point(alpha=0.7, show.legend=FALSE, aes(frame=year, ids=country)) +
+    # Add some manual scaling
+    scale_colour_manual(values=continent_colors) +
+    scale_size(range=c(2, 12)) +
+    scale_x_log10() +
+    labs(x='GDP per capita', 
+         y='Life expectancy at birth')
+
+plot
+```
+:::
+
+## Topic 3: Dynamic Visualizations {data-menu-title="plotly" auto-animate="true"}
+
+```{r style="font-size: 0.85em"}
+#| echo: true
+#| eval: false
+# Create ggplot object with gapminder data
+plot <- ggplot(data=gapminder, 
+               aes(x=gdpPercap, y=lifeExp, size=pop, color=continent)) +
+    # Add a point geom
+    geom_point(alpha=0.7, show.legend=FALSE, aes(frame=year, ids=country)) +
+    # Add some manual scaling
+    scale_colour_manual(values=continent_colors) +
+    scale_size(range=c(2, 12)) +
+    scale_x_log10() +
+    labs(x='GDP per capita', 
+         y='Life expectancy at birth') +
+    # Add some theme elements
+    theme(panel.background=element_rect(color="black", fill="lightyellow", size=0.25),
+          panel.grid=element_blank(),
+          plot.title=element_text(size=9, color="black"),
+          strip.background=element_rect(color="black", size=0.25),
+          axis.ticks=element_line(size=0.25),
+          axis.text=element_text(size=7, color="black"),
+          axis.title=element_text(size=8, color="black"))
+```
+
+::: {.fragment .fade-in fragment-index=1 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+plot <- ggplot(data=gapminder, 
+               aes(x=gdpPercap, y=lifeExp, size=pop, color=continent)) +
+    # Add a point geom
+    geom_point(alpha=0.7, show.legend=FALSE, aes(frame=year, ids=country)) +
+    # Add some manual scaling
+    scale_colour_manual(values=continent_colors) +
+    scale_size(range=c(2, 12)) +
+    scale_x_log10() +
+    labs(x='GDP per capita', 
+         y='Life expectancy at birth') +
+    # Add some theme elements
+    theme(panel.background=element_rect(color="black", fill="lightyellow", size=0.25),
+          panel.grid=element_blank(),
+          plot.title=element_text(size=9, color="black"),
+          strip.background=element_rect(color="black", size=0.25),
+          axis.ticks=element_line(size=0.25),
+          axis.text=element_text(size=7, color="black"),
+          axis.title=element_text(size=8, color="black"))
+
+plot
+```
+:::
+
+## Topic 3: Dynamic Visualizations {data-menu-title="plotly" auto-animate="true"}
+
+```{r style="font-size: 0.85em"}
+#| echo: true
+#| eval: false
+# Create ggplot object with gapminder data
+plot <- ggplot(data=gapminder, 
+               aes(x=gdpPercap, y=lifeExp, size=pop, color=continent)) +
+    # Add a point geom
+    geom_point(alpha=0.7, show.legend=FALSE, aes(frame=year, ids=country)) +
+    # Add some manual scaling
+    scale_colour_manual(values=continent_colors) +
+    scale_size(range=c(2, 12)) +
+    scale_x_log10() +
+    labs(x='GDP per capita', 
+         y='Life expectancy at birth') +
+    # Add some theme elements
+    theme(panel.background=element_rect(color="black", fill="lightyellow", size=0.25),
+          panel.grid=element_blank(),
+          plot.title=element_text(size=9, color="black"),
+          strip.background=element_rect(color="black", size=0.25),
+          axis.ticks=element_line(size=0.25),
+          axis.text=element_text(size=7, color="black"),
+          axis.title=element_text(size=8, color="black"))
+
+# Pass ggplot object to plotly
+plotly <- ggplotly(plot, height=500, width=800) |> 
+    animation_opts(1000, easing="linear", redraw=FALSE) |> 
+    animation_slider(currentvalue=list(prefix="YEAR ", font=list(color="red"), xanchor='left', yanchor='top')) |> 
+    animation_button(x = 1, xanchor = "right", y = -0.2, yanchor = "bottom")
+
+plotly
+```
+
+::: {.fragment .fade-in fragment-index=1 .absolute top="90" left="100"}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+plot <- ggplot(data=gapminder, 
+               aes(x=gdpPercap, y=lifeExp, size=pop, color=continent)) +
+    # Add a point geom
+    geom_point(alpha=0.7, show.legend=FALSE, aes(frame=year, ids=country)) +
+    # Add some manual scaling
+    scale_colour_manual(values=continent_colors) +
+    scale_size(range=c(2, 12)) +
+    scale_x_log10() +
+    labs(x='GDP per capita', 
+         y='Life expectancy at birth') +
+    # Add some theme elements
+    theme(panel.background=element_rect(color="black", fill="lightyellow", size=0.25),
+          panel.grid=element_blank(),
+          plot.title=element_text(size=9, color="black"),
+          strip.background=element_rect(color="black", size=0.25),
+          axis.ticks=element_line(size=0.25),
+          axis.text=element_text(size=7, color="black"),
+          axis.title=element_text(size=8, color="black"))
+
+# Pass ggplot object to plotly
+plotly <- ggplotly(plot, height=500, width=800) %>%
+    animation_opts(
+        1000, easing = "linear", redraw = FALSE) %>%
+    animation_slider(
+        currentvalue=list(prefix="YEAR ",
+                          font=list(color="red"),
+                          xanchor='left',
+                          yanchor='top')) %>%
+    animation_button(
+        x = 1, xanchor = "right", y = -0.2, yanchor = "bottom"
+    )
+
+plotly
+```
+:::
+
+## Topic 3: Dynamic Visualizations - ggplot2 integrations {data-menu-title="rayshader"}
+
+-   `ggplot2` integrations
+
+-   Packages that integrate with `ggplot2` objects
+
+    - Used as required arguments
+
+-   `plotly`
+
+-   `rayshader`
+
+    - Translates ggplot2 objects into 3D
+    - Models can be rotated and examined interactively
+
+![](images/rayshader_hex.png){.absolute top="52" right="0" width="30%"}
+
+## Topic 3: Dynamic Visualizations {data-menu-title="rayshader" auto-animate="true"}
+
+![](images/smtn_3D.png){.absolute top="90" left="0"}
+
+## Topic 3: Dynamic Visualizations {data-menu-title="rayshader" auto-animate="true"}
+
+```{r style="font-size: 0.85em"}
+#| echo: true
+#| eval: false
+# Create ggplot object with raster data ("digital elevation model")
+# Load necessary packages
+pacman::p_load(tidyverse, raster, ggthemes, sp, sf, rasterVis, rayshader)
+# Read raster dataset from url and convert to data frame
+url      <- "https://github.com/jeremymack-LU/rviz/blob/master/data/smtn_dem_clip.tif?raw=true"
+r.dem    <- raster::raster(url)
+r.df     <- raster::as.data.frame(r.dem, xy=TRUE)
+# Drop NAs and rename raster grid cell variable
+r.df     <- r.df |> drop_na() |> rename(elevation=3)
+```
+
+## Topic 3: Dynamic Visualizations {data-menu-title="rayshader" auto-animate="true"}
+
+```{r style="font-size: 0.85em"}
+#| echo: true
+#| eval: false
+# Create ggplot object with raster data ("digital elevation model")
+# Load necessary packages
+pacman::p_load(tidyverse, raster, ggthemes, sp, sf, rasterVis, rayshader)
+# Read raster dataset from url and convert to data frame
+url      <- "https://github.com/jeremymack-LU/rviz/blob/master/data/smtn_dem_clip.tif?raw=true"
+r.dem    <- raster::raster(url)
+r.df     <- raster::as.data.frame(r.dem, xy=TRUE)
+# Drop NAs and rename raster grid cell variable
+r.df     <- r.df |> drop_na() |> rename(elevation=3)
+# Create ggplot2 object
+r.plot <- ggplot() +
+    geom_raster(data=r.df,
+                aes(x=x, y=y, fill=elevation),
+                interpolate=TRUE,
+                show.legend=TRUE) +
+    scale_fill_gradientn(name = "Elevation", colors=terrain.colors(10)) +
+    coord_quickmap() +
+    theme_dark(base_size=6) +
+    theme(axis.title=element_blank(), legend.position='top', legend.direction='horizontal')
+```
+
+::: {.fragment .fade-in-then-out fragment-index=1 .absolute top="40" left="100"}
+![](images/smtn_raster.png){width="90%"}
+:::
+
+## Topic 3: Dynamic Visualizations {data-menu-title="rayshader" auto-animate="true"}
+
+```{r style="font-size: 0.85em"}
+#| echo: true
+#| eval: false
+# Create ggplot object with raster data ("digital elevation model")
+# Load necessary packages
+pacman::p_load(tidyverse, raster, ggthemes, sp, sf, rasterVis, rayshader)
+# Read raster dataset from url and convert to data frame
+url      <- "https://github.com/jeremymack-LU/rviz/blob/master/data/smtn_dem_clip.tif?raw=true"
+r.dem    <- raster::raster(url)
+r.df     <- raster::as.data.frame(r.dem, xy=TRUE)
+# Drop NAs and rename raster grid cell variable
+r.df     <- r.df |> drop_na() |> rename(elevation=3)
+# Create ggplot2 object
+r.plot <- ggplot() +
+    geom_raster(data=r.df,
+                aes(x=x, y=y, fill=elevation),
+                interpolate=TRUE,
+                show.legend=TRUE) +
+    scale_fill_gradientn(name = "Elevation", colors=terrain.colors(10)) +
+    coord_quickmap() +
+    theme_dark(base_size=6) +
+    theme(axis.title=element_blank(), legend.position='top', legend.direction='horizontal')
+# Pass ggplot2 object to rayshader function
+plot_gg(r.plot,
+        multicore=TRUE,
+        width=5,
+        height=5,
+        scale=200,
+        windowsize=c(1400,866),
+        zoom=0.55,
+        phi=30)
+```
+
+::: {.fragment .fade-in-then-out fragment-index=1 .absolute top="40" left="150"}
+![](images/smtn_3D_2.png){width="750"}
+:::
