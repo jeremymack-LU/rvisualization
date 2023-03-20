@@ -1895,3 +1895,41 @@ plot_gg(r.plot,
 ::: {.fragment .fade-in-then-out fragment-index=1 .absolute top="40" left="150"}
 ![](images/smtn_3D_2.png){width="750"}
 :::
+
+## Topic 3: Dynamic Visualizations {data-menu-title="rayshader" auto-animate="true"}
+
+```{r style="font-size: 0.85em"}
+#| echo: true
+#| eval: false
+# Create ggplot object with raster data ("digital elevation model")
+# Load necessary packages
+pacman::p_load(tidyverse, raster, ggthemes, sp, sf, rasterVis, rayshader)
+# Read raster dataset from url and convert to data frame
+url      <- "https://github.com/jeremymack-LU/rviz/blob/master/data/smtn_dem_clip.tif?raw=true"
+r.dem    <- raster::raster(url)
+r.df     <- raster::as.data.frame(r.dem, xy=TRUE)
+# Drop NAs and rename raster grid cell variable
+r.df     <- r.df |> drop_na() |> rename(elevation=3)
+# Create ggplot2 object
+r.plot <- ggplot() +
+    geom_raster(data=r.df,
+                aes(x=x, y=y, fill=elevation),
+                interpolate=TRUE,
+                show.legend=TRUE) +
+    scale_fill_gradientn(name = "Elevation", colors=terrain.colors(10)) +
+    coord_quickmap() +
+    theme_dark(base_size=6) +
+    theme(axis.title=element_blank(), legend.position='top', legend.direction='horizontal')
+# Pass ggplot2 object to rayshader function
+plot_gg(r.plot,
+        multicore=TRUE,
+        width=5,
+        height=5,
+        scale=200,
+        windowsize=c(1400,866),
+        zoom=0.55,
+        phi=30)
+# Capture snapshot of the rgl window
+render_snapshot(filename = "smtn_3D", clear=TRUE)
+```
+
