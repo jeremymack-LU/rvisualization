@@ -76,10 +76,6 @@ The presentation is split into five topics:
 ![](images/data-science-wrangle2.png){.fragment}
 
 ![](images/data-science-wrangle3.png){.fragment}
-
-![](images/data-science-wrangle1.png){.fragment}
-
-![](images/data-science-tidy.png){.fragment}
 :::
 
 ## Data visualization with R {data-menu-title="Dinosaur"}
@@ -91,6 +87,14 @@ The presentation is split into five topics:
 # Topic 1 {data-menu-title="Topic 1"}
 
 [The ([**layered**]{style="color:#edea2b"}) Grammar of Graphics]{style="font-size: 1.5em; text-align: center"}
+
+## Data visualization with R {data-menu-title="Data workflow"}
+
+::: {.r-stack}
+![](images/data-science-tidy1.png)
+
+![](images/data-science-tidy2.png){.fragment}
+:::
 
 ## Topic 1: The ([**layered**]{style="color:#edea2b"}) Grammar of Graphics {data-menu-title="Grammar of Graphics"}
 
@@ -821,11 +825,88 @@ penguins |>
 :::
 ::::
 
+:::{.absolute top="80" right="0"}    
+```{r}
+countdown::countdown(2L)
+```
+:::
+
+## Exercise 1 - `ggplot2`: {data-background="#ffffff" data-menu-title="Exercise1"}
+
+-   We just learned that `ggplot2` is an implementation of the "Grammar of Graphics" that uses a layered approach.
+
+-   Complete the following script, by replacing `??????s`, to re-create the visualization of the relationship between penguin flipper length and body mass.
+
+:::: columns
+::: {.column width='45%'}
+```{r style="font-size: 0.7em"}
+#| echo: true
+#| eval: false
+library(palmerpenguins)
+slice_head(penguins,n=3)
+```
+
+```{r style="font-size: 0.55em"}
+#| echo: false
+#| eval: true
+library(palmerpenguins)
+slice_head(penguins,n=3)
+```
+
+```{r style="font-size: 0.7em"}
+#| echo: true
+#| eval: false
+# Visualize body mass by flipper length
+penguins |> 
+    drop_na() |> 
+    ggplot(aes(x=flipper_length_mm,
+               y=body_mass_g)) +
+    geom_point(aes(color=species)) +
+    geom_smooth(method='lm',
+                color='black') +
+    scale_y_continuous(limits=c(2500,6500),
+                       breaks=seq(2500,6500,1000)) +
+    scale_color_discrete(name='Penguin species:') +
+    labs(x='Flipper length (mm)',
+         y='Body mass (g)') +
+    theme_minimal() +
+    theme(legend.position = 'top')
+```
+:::
+::: {.column width='55%'}
+```{r}
+#| echo: false
+#| eval: true
+#| fig-width: 9
+#| fig-height: 6
+library(palmerpenguins)
+penguins |> 
+    drop_na() |> 
+    ggplot(aes(x=flipper_length_mm,
+               y=body_mass_g)) +
+    geom_point(aes(color=species)) +
+    geom_smooth(method='lm',
+                color='black') +
+    scale_y_continuous(limits=c(2500,6500),
+                       breaks=seq(2500,6500,1000)) +
+    scale_color_discrete(name='Penguin species:') +
+    labs(x='Flipper length (mm)',
+         y='Body mass (g)') +
+    theme_minimal() +
+    theme(legend.position = 'top',
+          legend.title=element_text(size = 14),
+          legend.text=element_text(size = 12),
+          axis.text=element_text(size = 12),
+          axis.title=element_text(size = 14))
+```
+:::
+::::
+
 # Topic 2 {data-menu-title="Topic 2"}
 
 [Static Visualizations - ggplot2 extensions]{style="font-size: 1.5em; text-align: center"}
 
-## Topic 2: Static Visualizations - ggplot2 extensions {data-menu-title="extensions"}
+## Topic 2: Static Visualizations {data-menu-title="extensions"}
 
 -   `ggplot2` extensions
 
@@ -836,7 +917,7 @@ penguins |>
 
 ![](images/ggplot2_hex.png){.absolute top="52" right="0" width="30%"}
 
-## Topic 2: Static Visualizations - ggplot2 extensions {data-menu-title="patchwork"}
+## Topic 2: Static Visualizations {data-menu-title="patchwork"}
 
 -   `ggplot2` extensions
 
@@ -856,7 +937,7 @@ penguins |>
 ![](images/patchwork_hex.png){.absolute top="52" right="0" width="30%"}
 ![](images/patchwork.png){.absolute bottom="0" right="0" width="35%"}
 
-## Topic 2: Static Visualizations - ggplot2 extensions {data-menu-title="patchwork1"}
+## Topic 2: Static Visualizations {data-menu-title="patchwork1"}
 
 :::: columns
 ::: {.column width="50%"}
@@ -935,7 +1016,7 @@ plot1 + plot2
 ```
 :::
 
-## Topic 2: Static Visualizations - ggplot2 extensions {data-menu-title="patchwork2"}
+## Topic 2: Static Visualizations {data-menu-title="patchwork2"}
 
 :::: columns
 ::: {.column width="50%"}
@@ -1018,7 +1099,7 @@ plot1 / plot2
 ```
 :::
 
-## Topic 2: Static Visualizations - ggplot2 extensions {data-menu-title="patchwork3"}
+## Topic 2: Static Visualizations {data-menu-title="patchwork3"}
 
 :::: columns
 ::: {.column width="50%"}
@@ -1121,7 +1202,7 @@ plot3 <- ggplot(data=penguins,
 ```
 :::
 
-## Topic 2: Static Visualizations - ggplot2 extensions {data-menu-title="patchwork4"}
+## Topic 2: Static Visualizations {data-menu-title="patchwork4"}
 
 :::: columns
 ::: {.column width="50%"}
@@ -1228,7 +1309,7 @@ plot3 <- ggplot(data=penguins,
 ```
 :::
 
-## Topic 2: Static Visualizations - ggplot2 extensions {data-menu-title="ggthemes"}
+## Topic 2: Static Visualizations {data-menu-title="ggthemes"}
 ![](images/ggforce_hex.png){.absolute top="52" right="0" width="30%"}
 
 -   `ggplot2` extensions
@@ -1292,7 +1373,7 @@ p4 <- p1 + theme_clean()
 ```
 :::
 
-## Topic 2: Static Visualizations - ggplot2 extensions {data-menu-title="ggstatsplot"}
+## Topic 2: Static Visualizations {data-menu-title="ggstatsplot"}
 ![](images/ggstats_hex.png){.absolute top="52" right="0" width="30%"}
 
 -   `ggplot2` extensions
@@ -1496,7 +1577,7 @@ anim <- ggplot(data=gapminder,
     ease_aes('linear') +
     labs(title='Year: {frame_time}', 
          x='GDP per capita', 
-         y='Life expectancy at birth') +
+         y='Life expectancy at birth')
 
 anim
 ```
@@ -1527,11 +1608,11 @@ anim <- ggplot(data=gapminder,
          x='GDP per capita', 
          y='Life expectancy at birth') +
     # Add some theme elements
-    theme(panel.background=element_rect(color="black", fill="lightyellow", size=0.25),
+    theme(panel.background=element_rect(color="black", fill="lightyellow", linewidth=0.25),
           panel.grid=element_blank(),
           plot.title=element_text(size=9, color="black"),
-          strip.background=element_rect(color="black", size=0.25),
-          axis.ticks=element_line(size=0.25),
+          strip.background=element_rect(color="black", linewidth=0.25),
+          axis.ticks=element_line(linewidth=0.25),
           axis.text=element_text(size=7, color="black"),
           axis.title=element_text(size=8, color="black"))
 
@@ -1549,7 +1630,7 @@ anim_save(anim, filename="gapminder.gif")
 
 [Dynamic Visualizations - ggplot2 integrations]{style="font-size: 1.5em; text-align: center"}
 
-## Topic 3: Dynamic Visualizations - ggplot2 integrations {data-menu-title="integrations"}
+## Topic 3: Dynamic Visualizations {data-menu-title="integrations"}
 
 -   `ggplot2` integrations
 
@@ -1559,7 +1640,7 @@ anim_save(anim, filename="gapminder.gif")
 
 ![](images/ggplot2_hex.png){.absolute top="52" right="0" width="30%"}
 
-## Topic 3: Dynamic Visualizations - ggplot2 integrations {data-menu-title="plotly"}
+## Topic 3: Dynamic Visualizations {data-menu-title="plotly"}
 
 -   `ggplot2` integrations
 
@@ -1574,9 +1655,9 @@ anim_save(anim, filename="gapminder.gif")
 
 ![](images/plotly_logo.png){.absolute top="52" right="0" width="30%"}
 
-## Topic 3: Dynamic Visualizations - ggplot2 integrations {data-menu-title="plotly"}
+## Topic 3: Dynamic Visualizations {data-menu-title="plotly"}
 
-::: {.fragment .fade-in fragment-index=1 .absolute top="90" left="100"}
+::: {.absolute top="90" left="100"}
 ```{r}
 #| echo: false
 #| eval: true
@@ -1790,7 +1871,7 @@ plotly
 ```
 :::
 
-## Topic 3: Dynamic Visualizations - ggplot2 integrations {data-menu-title="rayshader"}
+## Topic 3: Dynamic Visualizations {data-menu-title="rayshader"}
 
 -   `ggplot2` integrations
 
@@ -1933,3 +2014,45 @@ plot_gg(r.plot,
 render_snapshot(filename = "smtn_3D", clear=TRUE)
 ```
 
+## Review - Data Visualization with R: {data-background="#000000" data-menu-title="Review 4 - Data"}
+
+-   [**Grammar of graphics**]{style="color:#edea2b"} - basis for many data visualization programs
+
+-   `ggplot2` is a popular implementation:
+
+    - Layered approach with sensible defaults</br>
+      ![](images/ggplot.png){width="35%"}
+    
+    :::fragment
+    - Extension packages extend the functionality of `ggplot2`
+      - `patchwork`, `ggthemes`, `ggstatsplot`, `gganimate`
+    - Integration packages integrate ggplot objects into their own functions
+      - `plotly`, `rayshader`
+    :::
+
+![](images/ggplot2_hex.png){.absolute bottom="0" right="0" width="170"}
+![](images/tidyverse_hex.png){.absolute bottom="0" right="175" width="170"}
+![](images/patchwork_hex.png){.absolute bottom="0" right="350" width="170"}
+
+# Topic 4 {data-menu-title="Topic 4"}
+
+[Shiny Apps - a preview]{style="font-size: 1.5em; text-align: center"}
+
+## Topic 4: Shiny Apps - a preview {data-menu-title="Shiny Apps"}
+
+-   Posit product - `shiny`
+
+-   Build interactive web applications, reports,and</br>dashboards with R
+
+-   [**Reactive Programming**]{style="color:#edea2b"}
+
+![](images/shiny_hex.png){.absolute top="52" right="0" width="30%"}
+
+
+## Topic 4: Shiny Apps - a preview {data-menu-title="Shiny Apps"}
+
+<p>
+
+<a href="https://jeremymack.shinyapps.io/purpleair/"> <img src="./images/shinyapp.png" alt="Picture of learning R graph" height="100%" width="100%"/> </a>
+
+</p>
