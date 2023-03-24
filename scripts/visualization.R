@@ -5,7 +5,7 @@
 # Install and load packages used throughout script ------------------------
 install.packages('pacman')
 # Load necessary packages
-pacman::p_load(tidyverse, raster, ggthemes, sp, sf, rasterVis, rayshader, palmerpenguins)
+pacman::p_load(tidyverse, raster, ggthemes, sp, sf, rasterVis, palmerpenguins)
 
 # Static visualization - Old Faithful -------------------------------------
 # Create plot object
@@ -31,8 +31,6 @@ plot <- plot +
        y="Waiting time to next eruption (minutes)")
 
 # Static visualization - Palmer Penguins ----------------------------------
-#install.packages('pacman')
-pacman::p_load(palmerpenguins)
 slice_head(penguins, n=3)
 
 # Visualize body mass by flipper length
@@ -87,6 +85,22 @@ plot1 / plot2
 
 (plot1 + plot2) / plot3 + plot_layout(heights=c(2,1))
 
+# Visualize body mass by flipper length with facets
+penguins |> 
+  drop_na() |> 
+  ggplot(aes(x=flipper_length_mm,
+             y=body_mass_g)) +
+  geom_point(aes(color=species), show.legend=FALSE) +
+  geom_smooth(method='lm',
+              color='black') +
+  scale_y_continuous(limits=c(2500,6500),
+                     breaks=seq(2500,6500,1000)) +
+  scale_color_discrete(name='Penguin species:') +
+  facet_wrap(vars(species),ncol=1) +
+  labs(x='Flipper length (mm)',
+       y='Body mass (g)') +
+  theme_minimal()
+
 install.packages(ggthemes); library(ggthemes)
 # Excel theme
 p1 <- ggplot(data=penguins) +
@@ -133,6 +147,7 @@ plotly <- ggplotly(plot, height=500, width=800) |>
 plotly
 
 # rayshader ---------------------------------------------------------------
+pacman::p_load(rayshader)
 # 3D visualization of South Mountain
 # Read raster dataset from url and convert to data frame
 url      <- "https://github.com/jeremymack-LU/rviz/blob/master/data/smtn_dem_clip.tif?raw=true"
