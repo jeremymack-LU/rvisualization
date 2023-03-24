@@ -22,30 +22,6 @@ format:
 preview-links: auto
 ---
 
-## About this presentation {data-menu-title="About"}
-
-::: columns
--   This seminar is the third in a series on [**R programming**]{style="color:#edea2b"}.
-
--   It's targeted at people that took the previous seminars, or have programming experience.
-
-::: fragment
--   By the end of this presentation, you should know about...
-
-    1.  The Grammar of Graphics
-    2.  Static Visualizations
-        - Graphical and tabular
-    3.  Dynamic Visualizations
-        - Graphical and tabular
-:::
-
-::: fragment
--   Raw code available on [Github](https://github.com/jeremymack-LU/rvisualization/blob/main/index.qmd)
-:::
-:::
-
-![](images/ggplot2_masterpiece.png){.absolute bottom="0" right="0" width="400"}
-
 ## Structure of the presentation {data-menu-title="Presentation outline"}
 
 The presentation is split into five topics:
@@ -64,6 +40,10 @@ The presentation is split into five topics:
 
 ::: fragment
 -   Topic 5:    Additional resources
+:::
+
+::: fragment
+-   Raw code available on [Github](https://github.com/jeremymack-LU/rvisualization/blob/main/index.qmd)
 :::
 
 ![](images/r_learners.png){.absolute bottom="0" right="0" width="50%" height="50%"}
@@ -221,7 +201,7 @@ The presentation is split into five topics:
 :::
 :::
 
-::: {.fragment .fade-in fragment-index=8}
+::: {.fragment .fade-in-then-out fragment-index=8}
 
 ![](images/ggplot2_9.png){.absolute top="52" right="0" width="35%"}
 
@@ -240,28 +220,33 @@ The presentation is split into five topics:
 :::
 :::
 
-## Topic 1: The ([**layered**]{style="color:#edea2b"}) Grammar of Graphics {data-menu-title="ggplot2"}
+::: {.fragment .fade-in fragment-index=9}
 
 ![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
 
--   Tidyverse package - `ggplot2`
-
--   Implementation of the grammar of graphics
-
+::: {.absolute top="172" left="0"}
 -   Layered approach to building graphics
-
+    
     - Required arguments
     - Everything else has [**sensible defaults**]{style="color:#edea2b"}
-    
-::: fragment
+
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=10}
+
+![](images/ggplot2_10.png){.absolute top="52" right="0" width="35%"}
 
 ![](images/ggplot.png){.absolute bottom="150" right="0" width="35%"}
 
+::: {.absolute top="300" left="0"}
 -   Basic template has three functions:
 
     - `ggplot` - creates a blank canvas
     - `geom` - adds a layer
     - `aes` - visual properties of an object
+
+:::
 :::
 
 # Topic 2 {data-menu-title="Topic 2"}
@@ -2056,3 +2041,35 @@ render_snapshot(filename = "smtn_3D", clear=TRUE)
 <a href="https://jeremymack.shinyapps.io/purpleair/"> <img src="./images/shinyapp.png" alt="Picture of learning R graph" height="100%" width="100%"/> </a>
 
 </p>
+
+# Topic 5 {data-menu-title="Topic 5"}
+
+[Extras - Additional Resources]{style="font-size: 1.5em; text-align: center"}
+
+## Topic 5: Additional Resources {data-menu-title="Additional Resources"}
+
+::: columns
+::: {.column width="60%"}
+-   Upcoming workshops (*via Zoom):
+
+    - Shiny Apps in R (3/28, 3/31*)
+
+-   [Lehigh's R Programming Slack Channel](https://lehigh-home.slack.com/archives/C04AE4B9X0S)
+
+::: fragment
+-   External resources:
+    
+    - [R for Data Science - Book](https://r4ds.had.co.nz/)
+    - [R for Data Science - Slack Workspace](https://rfordatascience.slack.com)
+    - [RStudio Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/)
+    - [Twitter for R Programmers](https://www.t4rstats.com/follow-some-folks.html)
+    - [LinkedIn Learning](https://www.linkedin.com/learning/search?keywords=r%20programming&u=2222241)
+    - [Mastering Shiny](https://mastering-shiny.org/index.html)
+:::
+
+:::
+::: {.column width="40%"}
+
+![](images/tidyverse2.png)
+:::
+:::
